@@ -1,8 +1,3 @@
-/** @format */
+import Chart from './libs/Chart.min.js';
 
-chrome.action.onClicked.addListener((tab) => {
-	chrome.scripting.executeScript({
-		target: { tabId: tab.id },
-		files: ["libs/chart.min.js", "contentScript.js"],
-	})
-})
+window.Chart = Chart;
