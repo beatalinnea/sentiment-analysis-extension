@@ -23,8 +23,18 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["scraper.js", "sentiment.js"],
+      "resources": ["scraper.js", "sentiment.js", "sentimentChart.js", "chart.js", "libs/chart.min.js"],
       "matches": ["<all_urls>"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js", "libs/chart.min.js"],
+      "type": "module"
     }
   ]
 }

@@ -8,11 +8,8 @@
 
 export async function analyzeSentiment(text) {
 	try {
-		const response = await fetch("http://localhost:8000/get-sentiment", {
-			method: "POST",
-			headers: { "Content-Type": "application/json" },
-			body: JSON.stringify({ text }),
-		})
+		// Edited fetch to work with my hardcoded result API
+		const response = await fetch("http://localhost:8000/get-sentiment")
 		if (!response.ok) {
 			throw new Error(`API request failed with status ${response.status}`)
 		}

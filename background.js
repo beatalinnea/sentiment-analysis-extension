@@ -3,6 +3,6 @@
 chrome.action.onClicked.addListener((tab) => {
 	chrome.scripting.executeScript({
 		target: { tabId: tab.id },
-		files: ["contentScript.js"],
+		files: ["libs/chart.min.js", "contentScript.js"],
 	})
 })

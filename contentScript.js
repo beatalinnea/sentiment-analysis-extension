@@ -1,6 +1,6 @@
 /** @format */
 
-;(function () {
+; (function () {
 	if (document.getElementById("my-extension-side-panel")) return
 
 	const panel = document.createElement("div")
@@ -76,7 +76,7 @@
 	}
 
 	// Override history methods to detect SPA URL changes.
-	;(function (history) {
+	; (function (history) {
 		const originalPushState = history.pushState
 		history.pushState = function (...args) {
 			const result = originalPushState.apply(history, args)
@@ -113,12 +113,16 @@
 			const { analyzeSentiment } = await import(
 				chrome.runtime.getURL("sentiment.js")
 			)
+			const { createSentimentChart } = await import(
+				chrome.runtime.getURL("sentimentChart.js")
+			)
 			const extractedText = await extractAndProcessText(window.location.href)
 			h1Paragraph.textContent = "H1: " + (extractedText || "No H1 found.")
 			if (extractedText) {
 				const sentimentData = await analyzeSentiment(extractedText)
 				sentimentLabel.textContent = sentimentData.label
 				sentimentScore.textContent = sentimentData.score.toFixed(2)
+				createSentimentChart(sentimentData.label, sentimentData.score)
 			} else {
 				sentimentLabel.textContent = "N/A"
 				sentimentScore.textContent = ""
