@@ -1,4 +1,3 @@
-// src/PieChartComponent.jsx
 import { Pie } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 
@@ -6,26 +5,72 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const PieChartComponent = ({ sentiment, score }) => {
-  const data = {
-    labels: ["POSITIVE", "NEUTRAL", "NEGATIVE"],
-    datasets: [
-      {
-        data: [
-          sentiment === "POSITIVE" ? score : 0,
-          sentiment === "NEUTRAL" ? score : 0,
-          sentiment === "NEGATIVE" ? score : 0
-        ],
-        backgroundColor: [
-          "rgba(0, 255, 0, 0.6)", // Positive color
-          "rgba(255, 255, 0, 0.6)", // Neutral color
-          "rgba(255, 0, 0, 0.6)" // Negative color
-        ],
-        hoverOffset: 4
-      }
-    ]
+  // Define colors for each sentiment type
+  const sentimentColors = {
+    POSITIVE: "rgba(0, 255, 0, 0.6)", // Green
+    NEUTRAL: "rgba(255, 255, 0, 0.6)", // Yellow
+    NEGATIVE: "rgba(255, 0, 0, 0.6)",  // Red
   };
 
-  return <Pie data={data} />;
+  // The color for the remaining "uncertainty" section
+  const uncertaintyColor = "rgba(200, 200, 200, 0.6)"; // Light grey
+
+  // Logic to determine the dataset based on the selected sentiment
+  let data = {
+    labels: ["Certainty", "Uncertainty"],
+    datasets: [],
+  };
+
+  switch (sentiment) {
+    case "POSITIVE":
+      data.datasets = [
+        {
+          data: [score, 1 - score], // Certainty vs uncertainty based on score
+          backgroundColor: [
+            sentimentColors.POSITIVE, // Positive part (certainty)
+            uncertaintyColor,         // Uncertainty part
+          ],
+          borderWidth: 1,
+          borderColor: "transparent",
+        },
+      ];
+      break;
+    case "NEUTRAL":
+      data.datasets = [
+        {
+          data: [score, 1 - score], // Certainty vs uncertainty based on score
+          backgroundColor: [
+            sentimentColors.NEUTRAL, // Neutral part (certainty)
+            uncertaintyColor,        // Uncertainty part
+          ],
+          borderWidth: 1,
+          borderColor: "transparent",
+        },
+      ];
+      break;
+    case "NEGATIVE":
+      data.datasets = [
+        {
+          data: [score, 1 - score], // Certainty vs uncertainty based on score
+          backgroundColor: [
+            sentimentColors.NEGATIVE, // Negative part (certainty)
+            uncertaintyColor,         // Uncertainty part
+          ],
+          borderWidth: 1,
+          borderColor: "transparent",
+        },
+      ];
+      break;
+    default:
+      break;
+  }
+
+  return (
+    <div>
+      {/* Pie chart */}
+      <Pie data={data} />
+    </div>
+  );
 };
 
 export default PieChartComponent;
