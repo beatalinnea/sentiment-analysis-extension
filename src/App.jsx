@@ -1,13 +1,14 @@
-import './App.css'
-import ChartComponent from './ChartComponent'
+
+import Container from "./Charts/Container";
 
 function App() {
+
   return (
     <div className="App">
-      <h1>React App with Chart.js</h1>
-      <ChartComponent />
+      <h1>Sentiment Visualisation</h1>
+      <Container />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
