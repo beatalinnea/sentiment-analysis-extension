@@ -4,7 +4,6 @@ const SentimentControls = ({ setSentiment, score, setScore }) => {
   // Handle the sentiment button click
   const handleSentimentClick = (label) => {
     setSentiment(label);
-    setScore(0.5); // Reset score to neutral when a sentiment is selected
   };
 
   // Handle the slider change

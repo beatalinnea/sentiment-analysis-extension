@@ -75,7 +75,7 @@ const BarChartComponent = ({ sentiment, score }) => {
       tooltip: {
         callbacks: {
           label: function (tooltipItem) {
-            return `Score: ${tooltipItem.raw.toFixed(2)}`; // Custom tooltip text
+            return `Score: ${tooltipItem.raw}`; // Custom tooltip text
           },
         },
       },

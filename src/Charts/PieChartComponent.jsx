@@ -1,8 +1,8 @@
 import { Pie } from "react-chartjs-2";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend, LineElement } from "chart.js";
 
 // Register the necessary Chart.js components
-ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(ArcElement, Tooltip, Legend, LineElement);
 
 const PieChartComponent = ({ sentiment, score }) => {
   // Define colors for each sentiment type
