@@ -1,5 +1,4 @@
-// src/RadarChartComponent.jsx
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { Radar } from "react-chartjs-2";
 import { Chart as ChartJS, RadialLinearScale, Tooltip, Legend, LineElement, Filler } from "chart.js";
 
@@ -78,14 +77,6 @@ const RadarChart = ({ sentiment, score }) => {
   };
 
   const chartRef = useRef(null);
-
-  useEffect(() => {
-    // Cleanup chart when component unmounts
-    const chartInstance = chartRef.current.chartInstance;
-    if (chartInstance) {
-      chartInstance.destroy();
-    }
-  }, []);
 
   return <Radar data={data} options={options} ref={chartRef} />;
 };
