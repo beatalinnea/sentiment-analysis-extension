@@ -13,13 +13,20 @@ const SentimentScatterChart = ({ sentiment, score }) => {
     POSITIVE: 1,
   };
 
+  // Set color dynamically based on sentiment
+  const sentimentColorMapping = {
+    POSITIVE: "rgba(0, 255, 0, 1)", // Green for positive
+    NEUTRAL: "rgba(255, 255, 0, 1)", // Yellow for neutral
+    NEGATIVE: "rgba(255, 0, 0, 1)", // Red for negative
+  };
+
   // Ensure that x updates when sentiment changes
   const [chartData, setChartData] = useState({
     datasets: [
       {
         label: "Sentiment Score",
         data: [{ x: sentimentXMapping[sentiment], y: score }],
-        backgroundColor: "rgba(0, 123, 255, 1)",
+        backgroundColor: sentimentColorMapping[sentiment], // Dynamically set the color based on sentiment
       },
     ],
   });
@@ -31,7 +38,7 @@ const SentimentScatterChart = ({ sentiment, score }) => {
         {
           label: `Sentiment: ${sentiment}`, // Dynamic label
           data: [{ x: sentimentXMapping[sentiment], y: score }],
-          backgroundColor: "rgba(0, 123, 255, 1)",
+          backgroundColor: sentimentColorMapping[sentiment], // Dynamically set the color based on sentiment
         },
       ],
     });

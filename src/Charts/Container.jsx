@@ -21,9 +21,9 @@ const Container = () => {
       <hr style={{ border: "0.5px solidrgb(87, 87, 87)", width: "50vw"}} />
         <BarChartComponent sentiment={sentiment} score={score} />
         <hr style={{ border: "0.5px solidrgb(87, 87, 87)", width: "50vw"}} />
-        <RadarChart sentiment={sentiment} score={score} />
-        <hr style={{ border: "0.5px solidrgb(87, 87, 87)", width: "50vw"}} />
         <PieChartComponent sentiment={sentiment} score={score} />
+        <hr style={{ border: "0.5px solidrgb(87, 87, 87)", width: "50vw"}} />
+        <RadarChart sentiment={sentiment} score={score} />
         <hr style={{ border: "0.5px solidrgb(87, 87, 87)", width: "50vw"}} />
         <ScatterChart sentiment={sentiment} score={score} />
       </div>
