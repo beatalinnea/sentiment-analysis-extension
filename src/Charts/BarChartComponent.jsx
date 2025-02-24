@@ -26,24 +26,26 @@ const BarChartComponent = ({ sentiment, score }) => {
 
   // Chart.js data configuration
   const data = {
-    labels: ["POSITIVE", "NEUTRAL", "NEGATIVE"],
+    // Swap the order of the labels here
+    labels: ["NEGATIVE", "NEUTRAL", "POSITIVE"], // Negative first, then Neutral, Positive last
     datasets: [
       {
         label: "Sentiment Score", // Label for the dataset
+        // Update the data to match the new label order
         data: [
-          sentiment === "POSITIVE" ? score : 0,
-          sentiment === "NEUTRAL" ? score : 0,
-          sentiment === "NEGATIVE" ? score : 0
+          sentiment === "NEGATIVE" ? score : 0, // Negative score
+          sentiment === "NEUTRAL" ? score : 0,  // Neutral score
+          sentiment === "POSITIVE" ? score : 0 // Positive score
         ],
         backgroundColor: [
-          sentiment === "POSITIVE" ? colorScheme.backgroundColor : "rgba(0, 255, 0, 0.2)",
+          sentiment === "NEGATIVE" ? colorScheme.backgroundColor : "rgba(255, 0, 0, 0.2)",
           sentiment === "NEUTRAL" ? colorScheme.backgroundColor : "rgba(255, 255, 0, 0.2)",
-          sentiment === "NEGATIVE" ? colorScheme.backgroundColor : "rgba(255, 0, 0, 0.2)"
+          sentiment === "POSITIVE" ? colorScheme.backgroundColor : "rgba(0, 255, 0, 0.2)"
         ],
         borderColor: [
-          sentiment === "POSITIVE" ? colorScheme.borderColor : "rgba(0, 255, 0, 1)",
+          sentiment === "NEGATIVE" ? colorScheme.borderColor : "rgba(255, 0, 0, 1)",
           sentiment === "NEUTRAL" ? colorScheme.borderColor : "rgba(255, 255, 0, 1)",
-          sentiment === "NEGATIVE" ? colorScheme.borderColor : "rgba(255, 0, 0, 1)"
+          sentiment === "POSITIVE" ? colorScheme.borderColor : "rgba(0, 255, 0, 1)"
         ],
         borderWidth: 1
       }

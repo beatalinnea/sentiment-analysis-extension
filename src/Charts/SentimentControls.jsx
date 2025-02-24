@@ -15,9 +15,9 @@ const SentimentControls = ({ setSentiment, score, setScore }) => {
     <div className="sentiment-controls">
       {/* Sentiment buttons */}
       <div className="sentiment-buttons">
-        <button onClick={() => handleSentimentClick("POSITIVE")}>POSITIVE</button>
-        <button onClick={() => handleSentimentClick("NEUTRAL")}>NEUTRAL</button>
         <button onClick={() => handleSentimentClick("NEGATIVE")}>NEGATIVE</button>
+        <button onClick={() => handleSentimentClick("NEUTRAL")}>NEUTRAL</button>
+        <button onClick={() => handleSentimentClick("POSITIVE")}>POSITIVE</button>
       </div>
 
       {/* Slider for score */}
