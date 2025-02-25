@@ -1,18 +1,19 @@
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.action === "updateSidebar") {
-    console.log("Received message from content script:", message);
-    const { title, url } = message.pageData;
-
-    // Update the sidebar with the new title and URL
-    document.getElementById("title").innerText = `Title: ${title}`;
-    document.getElementById("url").innerText = `URL: ${url}`;
-
-    // Optionally, update the chart with the new data
-    createChart(title, url);
+    console.log("Received message from background script");
+    updateSidebar(document.title, window.location.href);
   }
 });
 
 document.getElementById("scrapeBtn").addEventListener("click", () => {
+  console.log("Scrape button clicked");
+  updateSidebar();
+});
+
+/**
+ * Updates the sidebar content with the given title and URL.
+ */
+function updateSidebar() {
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     chrome.scripting.executeScript(
       {
@@ -24,21 +25,16 @@ document.getElementById("scrapeBtn").addEventListener("click", () => {
       },
       (results) => {
         if (results && results[0] && results[0].result) {
-          const titleText = results[0].result.title;
-          const urlText = results[0].result.url;
-
-          document.getElementById("title").innerText = `Title: ${titleText}`;
-          document.getElementById("url").innerText = `URL: ${urlText}`;
-
-          // Generate a sample chart using Chart.js
-          createChart(titleText, urlText);
+          document.getElementById("title").innerText = `Title: ${results[0].result.title}`;
+          document.getElementById("url").innerText = `URL: ${results[0].result.url}`;
+          createChart(results[0].result.title, results[0].result.url);
         } else {
-          document.getElementById("title").innerText = "Error fetching data.";
+          updateSidebar("Error fetching data.", "");
         }
       }
     );
   });
-});
+}
 
 function createChart(title, url) {
   const ctx = document.getElementById("myChart").getContext("2d");
