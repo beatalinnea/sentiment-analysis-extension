@@ -1,33 +1,29 @@
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+chrome.runtime.onMessage.addListener((message) => {
   if (message.action === "updateSidebar") {
     console.log("Received message from background script");
-    updateSidebar(document.title, window.location.href);
+    fetchPageData();
   }
 });
 
 document.getElementById("scrapeBtn").addEventListener("click", () => {
   console.log("Scrape button clicked");
-  updateSidebar();
+  fetchPageData();
 });
 
-/**
- * Updates the sidebar content with the given title and URL.
- */
-function updateSidebar() {
+function fetchPageData() {
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     chrome.scripting.executeScript(
       {
         target: { tabId: tabs[0].id },
-        func: () => ({
-          title: document.title,
-          url: window.location.href
-        })
+        func: () => {
+          const h1Element = document.querySelector("h1");
+          const title = h1Element ? h1Element.innerText.trim() : document.title;
+          return { title, url: window.location.href };
+        }
       },
       (results) => {
-        if (results && results[0] && results[0].result) {
-          document.getElementById("title").innerText = `Title: ${results[0].result.title}`;
-          document.getElementById("url").innerText = `URL: ${results[0].result.url}`;
-          createChart(results[0].result.title, results[0].result.url);
+        if (results?.[0]?.result) {
+          updateSidebar(results[0].result.title, results[0].result.url);
         } else {
           updateSidebar("Error fetching data.", "");
         }
@@ -35,6 +31,13 @@ function updateSidebar() {
     );
   });
 }
+
+function updateSidebar(title, url) {
+  document.getElementById("title").innerText = `Title: ${title}`;
+  document.getElementById("url").innerText = `URL: ${url}`;
+  createChart(title, url);
+}
+
 
 function createChart(title, url) {
   const ctx = document.getElementById("myChart").getContext("2d");
