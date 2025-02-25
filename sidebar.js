@@ -25,7 +25,7 @@ function fetchPageData() {
         if (results?.[0]?.result) {
           updateSidebar(results[0].result.title, results[0].result.url);
         } else {
-          updateSidebar("Error fetching data.", "");
+          updateSidebar("No data", "No data");
         }
       }
     );
@@ -35,7 +35,13 @@ function fetchPageData() {
 function updateSidebar(title, url) {
   document.getElementById("title").innerText = `Title: ${title}`;
   document.getElementById("url").innerText = `URL: ${url}`;
-  createChart(title, url);
+  if (title === "No data" && url === "No data") {
+    document.getElementById("myChart").style.display = "none";
+    return;
+  } else {
+    document.getElementById("myChart").style.display = "block";
+    createChart(title, url);
+  }
 }
 
 

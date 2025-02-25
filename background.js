@@ -1,5 +1,5 @@
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-  if (changeInfo.url) {
+  if (changeInfo.status === "complete" || changeInfo.url) {
     updateUrl()
   }
 });
