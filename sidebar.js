@@ -1,3 +1,17 @@
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.action === "updateSidebar") {
+    console.log("Received message from content script:", message);
+    const { title, url } = message.pageData;
+
+    // Update the sidebar with the new title and URL
+    document.getElementById("title").innerText = `Title: ${title}`;
+    document.getElementById("url").innerText = `URL: ${url}`;
+
+    // Optionally, update the chart with the new data
+    createChart(title, url);
+  }
+});
+
 document.getElementById("scrapeBtn").addEventListener("click", () => {
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     chrome.scripting.executeScript(

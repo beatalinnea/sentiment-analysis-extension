@@ -3,7 +3,7 @@
   "name": "Web Scraper Sidebar",
   "version": "1.0",
   "description": "Scrapes the page title and URL in a sidebar.",
-  "permissions": ["activeTab", "sidePanel", "scripting"],
+  "permissions": ["activeTab", "sidePanel", "scripting", "tabs"],
   "host_permissions": ["<all_urls>"],
   "action": {
     "default_title": "Open Sidebar"
@@ -11,6 +11,16 @@
   "side_panel": {
     "default_path": "sidebar.html"
   },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
   "web_accessible_resources": [
   {
     "resources": ["chart.js"],
