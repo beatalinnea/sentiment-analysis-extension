@@ -56,11 +56,11 @@ function createChart(title, url) {
   window.myChart = new Chart(ctx, {
     type: "bar",
     data: {
-      labels: ["Title Length", "URL Length"],
+      labels: ["Negative", "Neutral", "Positive"],
       datasets: [{
-        label: "Character Count",
-        data: [title.length, url.length],
-        backgroundColor: ["blue", "red"]
+        label: "Certainty",
+        data: [title.length, 10, url.length],
+        backgroundColor: ["red", "yellow", "green"]
       }]
     },
     options: {
