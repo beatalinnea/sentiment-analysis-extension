@@ -37,12 +37,16 @@ export function createSingleChart(sentimentData) {
   });
 }
 
-
 export function createMultipleResChart(sentimentData) {
   const ctx = document.getElementById("myChart").getContext("2d");
+  const ctxPie = document.getElementById("myPieChart").getContext("2d");
 
   if (window.myChart instanceof Chart) {
     window.myChart.destroy();
+  }
+
+  if (window.myPieChart instanceof Chart) {
+    window.myPieChart.destroy();
   }
 
   const processedData = processSentimentData(sentimentData);
@@ -73,6 +77,40 @@ export function createMultipleResChart(sentimentData) {
       responsive: true,
       scales: { x: { stacked: true }, y: { stacked: true, title: { display: true, text: "Sentiment Results" } } },
       plugins: { title: { display: true, text: "Sentiment Certainty Distribution" }, legend: { display: false } },
+    },
+  });
+
+  window.myPieChart = new Chart(ctxPie, {
+    type: "pie",
+    data: {
+      labels: ["NEGATIVE", "NEUTRAL", "POSITIVE"],
+      datasets: [
+        {
+          label: "Sentiment Distribution",
+          data: [
+            processedData[0].low + processedData[0].medium + processedData[0].high, // NEGATIVE total
+            processedData[1].low + processedData[1].medium + processedData[1].high, // NEUTRAL total
+            processedData[2].low + processedData[2].medium + processedData[2].high, // POSITIVE total
+          ],
+          backgroundColor: [
+            getColor("NEGATIVE", 0.5),
+            getColor("NEUTRAL", 0.7),
+            getColor("POSITIVE", 1.0),
+          ],
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        title: {
+          display: true,
+          text: "Sentiment Distribution",
+        },
+        legend: {
+          display: false,
+        },
+      },
     },
   });
 }
