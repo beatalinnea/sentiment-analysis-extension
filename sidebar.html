@@ -6,7 +6,7 @@
   <title>Sentimenti</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
       padding: 15px;
       width: 300px;
     }
@@ -24,15 +24,19 @@
       margin-top: 20px;
       width: 100%;
     }
+    h1 {
+      text-align: center;
+    }
   </style>
 </head>
 <body>
-  <h2>Sentimenti</h2>
+  <h1>sentimenti</h1>
   <button id="scrapeBtn">Scrape Page Data</button>
   <p id="title">Title: (Click the button)</p>
   <p id="url">URL: (Click the button)</p>
   
   <!-- Canvas for Chart.js -->
+  <canvas id="singleChart"></canvas>
   <canvas id="myChart"></canvas>
 
   <script src="chart.js"></script>  <!-- Include Chart.js -->
