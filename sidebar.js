@@ -21,7 +21,7 @@ document.getElementById("scrapeBtn").addEventListener("click", () => {
   fetchPageData(updateSidebar);
 });
 
-document.getElementById("textInputBtn").addEventListener("click", () => {
+document.getElementById("textInputBtn").addEventListener("click", async () => {
   console.log("Text Input button clicked");
 
   // Hide title and URL and show text input form
@@ -30,20 +30,24 @@ document.getElementById("textInputBtn").addEventListener("click", () => {
   document.getElementById("url").style.display = "none";
 
   // Pass the callback for text input analysis
-  setupTextInputMode((userInput) => {
+  setupTextInputMode(async (userInput) => {
     console.log("Text input received:", userInput);
 
-    // Analyze the sentiment for the user input text
-    const sentimentData = analyzeMultipleSentiment(userInput);
-    const titleSentiment = analyzeSingleSentiment(userInput);
+    try {
+      // Wait for API responses
+      const sentimentData = await analyzeMultipleSentiment(userInput);
+      const titleSentiment = await analyzeSingleSentiment(userInput);
 
-    // Visualize the sentiment data
-    createSingleChart(titleSentiment);
-    createMultipleResChart(sentimentData);
+      // Visualize the sentiment data
+      createSingleChart(titleSentiment);
+      createMultipleResChart(sentimentData);
+    } catch (error) {
+      console.error("Error analyzing sentiment:", error);
+    }
   });
 });
 
-function updateSidebar(title, url) {
+async function updateSidebar(title, url) {
   document.getElementById("title").innerText = `Title: ${title}`;
   document.getElementById("url").innerText = `URL: ${url}`;
 
@@ -55,8 +59,16 @@ function updateSidebar(title, url) {
   }
 
   document.getElementById("myChart").style.display = "block";
-  const sentimentData = analyzeMultipleSentiment(title);
-  const titleSentiment = analyzeSingleSentiment(title); 
-  createSingleChart(titleSentiment);
-  createMultipleResChart(sentimentData);
+
+  try {
+    // Wait for API responses
+    const sentimentData = await analyzeMultipleSentiment(title);
+    const titleSentiment = await analyzeSingleSentiment(title);
+
+    // Visualize the sentiment data
+    createSingleChart(titleSentiment);
+    createMultipleResChart(sentimentData);
+  } catch (error) {
+    console.error("Error fetching sentiment analysis:", error);
+  }
 }
