@@ -1,7 +1,7 @@
 import { fetchPageData } from "./scripts/scraper.js";
 import { setupTextInputMode } from "./scripts/textInput.js";
 import { analyzeMultipleSentiment, analyzeSingleSentiment } from "./scripts/sentiment-api.js";
-import { createMultipleResChart, createSingleChart } from "./scripts/visualisation.js";
+import { createMultipleResChart, createScatterPlot, createSingleChart } from "./scripts/visualisation.js";
 
 chrome.runtime.onMessage.addListener((message) => {
   if (message.action === "updateSidebar") {
@@ -41,6 +41,7 @@ document.getElementById("textInputBtn").addEventListener("click", async () => {
       // Visualize the sentiment data
       createSingleChart(titleSentiment);
       createMultipleResChart(sentimentData);
+      createScatterPlot(sentimentData);
     } catch (error) {
       console.error("Error analyzing sentiment:", error);
     }
@@ -68,6 +69,7 @@ async function updateSidebar(title, url) {
     // Visualize the sentiment data
     createSingleChart(titleSentiment);
     createMultipleResChart(sentimentData);
+    createScatterPlot(sentimentData);
   } catch (error) {
     console.error("Error fetching sentiment analysis:", error);
   }

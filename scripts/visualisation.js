@@ -115,6 +115,72 @@ export function createMultipleResChart(sentimentData) {
   });
 }
 
+export function createScatterPlot(sentimentData) {
+  const ctx = document.getElementById("scatterPlot").getContext("2d");
+
+  if (window.scatterPlot instanceof Chart) {
+    window.scatterPlot.destroy();
+  }
+
+  const dataPoints = sentimentData.map((item, index) => ({
+    x: item.score,
+    y: Math.floor(Math.random() * (512 - 10 + 1)) + 10,
+    id: index + 1,
+    label: item.label,
+    backgroundColor: getColor(item.label, 0.8),
+  }));
+
+  const data = {
+    datasets: [
+      {
+        data: dataPoints,
+        pointBackgroundColor: dataPoints.map(({ backgroundColor }) => backgroundColor),
+        pointRadius: 5,
+      },
+    ],
+  };
+
+  const options = {
+    responsive: true,
+    plugins: {
+      tooltip: {
+        callbacks: {
+          title: (context) => context[0].raw.label, // Only show the label as the title
+          label: (context) => {
+            const { x, y } = context.raw;
+            return [`Certainty: ${x.toFixed(2)}`, `Word Count: ${y}`];
+          },
+        },
+      },
+      legend: {
+        display: false,
+      },
+    },
+    scales: {
+      x: {
+        type: "linear",
+        position: "bottom",
+        min: 0,
+        max: 1,
+      },
+      y: {
+        min: 10,
+        max: 600,
+        title: {
+          display: true,
+          text: "Word Count",
+        },
+      },
+    },
+  };
+
+  window.scatterPlot = new Chart(ctx, {
+    type: "scatter",
+    data,
+    options,
+  });
+}
+
 // ================================================================================
 // =============================== HELPER FUNCTIONS ===============================
 // ================================================================================
