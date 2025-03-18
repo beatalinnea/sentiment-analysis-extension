@@ -1,12 +1,10 @@
 export function createSingleChart(sentimentData) {
   const ctx = document.getElementById("singleChart").getContext("2d");
 
-  // Destroy the previous chart if it exists
   if (window.singleChart instanceof Chart) {
     window.singleChart.destroy();
   }
 
-  // Process sentiment data: Get the highest score for each label
   const sentimentLabels = ["NEGATIVE", "NEUTRAL", "POSITIVE"];
   const scores = sentimentLabels.map(label => {
     const items = sentimentData.filter(d => d.label === label);
@@ -22,17 +20,54 @@ export function createSingleChart(sentimentData) {
           label: "Sentiment Score",
           data: scores,
           backgroundColor: sentimentLabels.map(label => getColor(label, 1)),
-          borderWidth: 1,
+          borderWidth: 0,
         }
       ]
     },
     options: {
       responsive: true,
+      indexAxis: 'y', // This makes the bars horizontal
       scales: {
-        y: { min: 0, max: 1, title: { display: true, text: "Sentiment Score" } },
-        x: { title: { display: false } }
+        x: {
+          min: 0,
+          max: 1,
+          title: {
+            display: false,
+            text: "Sentiment Score"
+          },
+          ticks: {
+            stepSize: 0.1,
+            beginAtZero: true
+          },
+          grid: {
+            display: false
+          }
+        },
+        y: {
+          title: {
+            display: false,
+          },
+          grid: {
+            display: false
+          }
+        }
       },
-      plugins: { title: { display: true, text: "Title Sentiment Score" }, legend: { display: false } },
+      plugins: {
+        title: {
+          display: true,
+          text: "Sentiment Score for Title"
+        },
+        tooltip: {
+          callbacks: {
+            label: function(tooltipItem) {
+              return `Score: ${tooltipItem.raw.toFixed(2)}`;
+            }
+          }
+        },
+        legend: {
+          display: false
+        }
+      }
     }
   });
 }
@@ -145,7 +180,7 @@ export function createScatterPlot(sentimentData) {
     plugins: {
       tooltip: {
         callbacks: {
-          title: (context) => context[0].raw.label, // Only show the label as the title
+          title: (context) => context[0].raw.label,
           label: (context) => {
             const { x, y } = context.raw;
             return [`Certainty: ${x.toFixed(2)}`, `Word Count: ${y}`];

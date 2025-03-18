@@ -1,6 +1,6 @@
 export async function analyzeMultipleSentiment(text) {
   try {
-    const response = await fetch("http://127.0.0.1:8000/get-sentiment", {
+    const response = await fetch("http://194.47.176.95:8000/get-sentiment", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -33,7 +33,7 @@ export async function analyzeMultipleSentiment(text) {
 
 export async function analyzeSingleSentiment(text) {
   try {
-    const response = await fetch("http://127.0.0.1:8000/get-sentiment", {
+    const response = await fetch("http://194.47.176.95:8000/get-sentiment", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
