@@ -48,7 +48,7 @@ document.getElementById("highlightSentimentBtn").addEventListener("click", async
 });
 
 async function updateSidebar({ title, url, parts }) {
-  // document.getElementById("title").innerText = `Title: ${title}`;
+  document.getElementById("title").innerText = `Title: ${title}`;
   document.getElementById("url").innerText = `URL: ${url}`;
 
   if (title === "No data" && url === "No data") {
@@ -64,7 +64,6 @@ async function updateSidebar({ title, url, parts }) {
     currentSentimentData = await analyzeMultipleSentiment({ sections: parts });
     const mhSentiment = currentSentimentData.find((item) => item.id === "mh");
     createSingleChart(mhSentiment);
-    document.getElementById("title").innerText = `Heading: ${mhSentiment.content}`;
     createMultipleResChart(currentSentimentData);
     createScatterPlot(currentSentimentData);
   } catch (error) {
