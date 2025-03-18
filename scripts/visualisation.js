@@ -1,15 +1,27 @@
+export function clearTitleGraph() {
+  if (window.singleChart instanceof Chart) {
+    window.singleChart.destroy();
+  }
+  const canvas = document.getElementById("singleChart");
+  if (canvas) {
+    canvas.style.display = "none"; // Hide the canvas element
+  }
+}
+
 export function createSingleChart(sentimentData) {
-  const ctx = document.getElementById("singleChart").getContext("2d");
+  const canvas = document.getElementById("singleChart");
+  if (canvas) {
+    canvas.style.display = "block";
+  }
+  const ctx = canvas.getContext("2d");
 
   if (window.singleChart instanceof Chart) {
     window.singleChart.destroy();
   }
 
+  // Ensure sentimentData is a single object, not an array
   const sentimentLabels = ["NEGATIVE", "NEUTRAL", "POSITIVE"];
-  const scores = sentimentLabels.map(label => {
-    const items = sentimentData.filter(d => d.label === label);
-    return items.length > 0 ? Math.max(...items.map(d => d.score)) : 0;
-  });
+  const scores = sentimentLabels.map(label => (sentimentData.label === label ? sentimentData.score : 0));
 
   window.singleChart = new Chart(ctx, {
     type: "bar",
@@ -26,51 +38,39 @@ export function createSingleChart(sentimentData) {
     },
     options: {
       responsive: true,
-      indexAxis: 'y', // This makes the bars horizontal
+      indexAxis: "y", // Horizontal bars
       scales: {
         x: {
           min: 0,
           max: 1,
-          title: {
-            display: false,
-            text: "Sentiment Score"
-          },
           ticks: {
             stepSize: 0.1,
-            beginAtZero: true
+            beginAtZero: true,
           },
-          grid: {
-            display: false
-          }
+          grid: { display: false },
         },
         y: {
-          title: {
-            display: false,
-          },
-          grid: {
-            display: false
-          }
+          grid: { display: false },
         }
       },
       plugins: {
         title: {
           display: true,
-          text: "Sentiment Score for Title"
+          text: `Sentiment Score for Heading`,
         },
         tooltip: {
           callbacks: {
-            label: function(tooltipItem) {
+            label: function (tooltipItem) {
               return `Score: ${tooltipItem.raw.toFixed(2)}`;
             }
           }
         },
-        legend: {
-          display: false
-        }
+        legend: { display: false },
       }
     }
   });
 }
+
 
 export function createMultipleResChart(sentimentData) {
   const ctx = document.getElementById("myChart").getContext("2d");

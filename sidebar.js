@@ -1,45 +1,35 @@
-import { fetchPageData } from "./scripts/scraper.js";
+import { fetchAndProcessPageData } from "./scripts/scraper.js";
 import { setupTextInputMode } from "./scripts/textInput.js";
 import { analyzeMultipleSentiment, analyzeSingleSentiment } from "./scripts/sentiment-api.js";
-import { createMultipleResChart, createScatterPlot, createSingleChart } from "./scripts/visualisation.js";
+import { createMultipleResChart, createScatterPlot, createSingleChart, clearTitleGraph } from "./scripts/visualisation.js";
 
 chrome.runtime.onMessage.addListener((message) => {
   if (message.action === "updateSidebar") {
     console.log("Received message from background script");
-    fetchPageData(updateSidebar);
+    fetchAndProcessPageData(updateSidebar);
   }
 });
 
 document.getElementById("scrapeBtn").addEventListener("click", () => {
   console.log("Scrape button clicked");
-
-  // Hide text input form and show scrape mode elements
   document.getElementById("textInputForm").style.display = "none";
   document.getElementById("title").style.display = "block";
   document.getElementById("url").style.display = "block";
-
-  fetchPageData(updateSidebar);
+  fetchAndProcessPageData(updateSidebar);
 });
 
 document.getElementById("textInputBtn").addEventListener("click", async () => {
   console.log("Text Input button clicked");
-
-  // Hide title and URL and show text input form
   document.getElementById("textInputForm").style.display = "block";
   document.getElementById("title").style.display = "none";
   document.getElementById("url").style.display = "none";
 
-  // Pass the callback for text input analysis
   setupTextInputMode(async (userInput) => {
     console.log("Text input received:", userInput);
-
     try {
-      // Wait for API responses
-      const sentimentData = await analyzeMultipleSentiment(userInput);
-      const titleSentiment = await analyzeSingleSentiment(userInput);
-
-      // Visualize the sentiment data
-      createSingleChart(titleSentiment);
+      const sections = [{ id: "1", content: userInput }];
+      const sentimentData = await analyzeMultipleSentiment({ sections });
+      clearTitleGraph();
       createMultipleResChart(sentimentData);
       createScatterPlot(sentimentData);
     } catch (error) {
@@ -48,7 +38,7 @@ document.getElementById("textInputBtn").addEventListener("click", async () => {
   });
 });
 
-async function updateSidebar(title, url) {
+async function updateSidebar({ title, url, parts }) {
   document.getElementById("title").innerText = `Title: ${title}`;
   document.getElementById("url").innerText = `URL: ${url}`;
 
@@ -60,14 +50,10 @@ async function updateSidebar(title, url) {
   }
 
   document.getElementById("myChart").style.display = "block";
-
   try {
-    // Wait for API responses
-    const sentimentData = await analyzeMultipleSentiment(title);
-    const titleSentiment = await analyzeSingleSentiment(title);
-
-    // Visualize the sentiment data
-    createSingleChart(titleSentiment);
+    const sentimentData = await analyzeMultipleSentiment({ sections: parts });
+    const mhSentiment = sentimentData.find((item) => item.id === "mh");
+    createSingleChart(mhSentiment);
     createMultipleResChart(sentimentData);
     createScatterPlot(sentimentData);
   } catch (error) {
