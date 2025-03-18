@@ -2,6 +2,9 @@ import { fetchAndProcessPageData } from "./scripts/scraper.js";
 import { setupTextInputMode } from "./scripts/textInput.js";
 import { analyzeMultipleSentiment, analyzeSingleSentiment } from "./scripts/sentiment-api.js";
 import { createMultipleResChart, createScatterPlot, createSingleChart, clearTitleGraph } from "./scripts/visualisation.js";
+import { highlightSentimentElements } from "./scripts/highlight.js";
+
+let currentSentimentData = [];
 
 chrome.runtime.onMessage.addListener((message) => {
   if (message.action === "updateSidebar") {
@@ -23,6 +26,7 @@ document.getElementById("textInputBtn").addEventListener("click", async () => {
   document.getElementById("textInputForm").style.display = "block";
   document.getElementById("title").style.display = "none";
   document.getElementById("url").style.display = "none";
+  document.getElementById("highlightSentimentBtn").style.display = "none";
 
   setupTextInputMode(async (userInput) => {
     console.log("Text input received:", userInput);
@@ -38,6 +42,11 @@ document.getElementById("textInputBtn").addEventListener("click", async () => {
   });
 });
 
+document.getElementById("highlightSentimentBtn").addEventListener("click", async () => {
+  console.log("Highlight Sentiments button clicked");
+  await highlightSentimentElements(currentSentimentData);
+});
+
 async function updateSidebar({ title, url, parts }) {
   document.getElementById("title").innerText = `Title: ${title}`;
   document.getElementById("url").innerText = `URL: ${url}`;
@@ -50,12 +59,13 @@ async function updateSidebar({ title, url, parts }) {
   }
 
   document.getElementById("myChart").style.display = "block";
+  document.getElementById("highlightSentimentBtn").style.display = "block";
   try {
-    const sentimentData = await analyzeMultipleSentiment({ sections: parts });
-    const mhSentiment = sentimentData.find((item) => item.id === "mh");
+    currentSentimentData = await analyzeMultipleSentiment({ sections: parts });
+    const mhSentiment = currentSentimentData.find((item) => item.id === "mh");
     createSingleChart(mhSentiment);
-    createMultipleResChart(sentimentData);
-    createScatterPlot(sentimentData);
+    createMultipleResChart(currentSentimentData);
+    createScatterPlot(currentSentimentData);
   } catch (error) {
     console.error("Error fetching sentiment analysis:", error);
   }
