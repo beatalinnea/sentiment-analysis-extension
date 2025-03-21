@@ -26,29 +26,37 @@ export function fetchAndProcessPageData(callback) {
  * Extracts article content from the live webpage and applies sentiment attributes.
  * @returns {Object} - Contains title, URL, and extracted article parts.
  */
-function extractAndProcessContent() {
-  const h1Element = document.querySelector("h1");
-  const title = h1Element ? h1Element.innerText.trim() : document.title;
+async function extractAndProcessContent() {
   const url = window.location.href;
+  const title = document.title;
 
-  // Clear previous sentiment attributes
-  document.querySelectorAll("[data-sentiment-id]").forEach((el) => {
-    el.removeAttribute("data-sentiment-id");
-  });
+  // Fetch the HTML of the page at the current URL
+  const response = await fetch(url);
+  const html = await response.text();
 
+  // Use DOMParser to parse the HTML content
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html, 'text/html');
+
+  // Now process the parsed document (not the live document)
   const parts = [];
-  const container = document.querySelector("article") || document.body;
+  const h1Element = doc.querySelector("h1");
   
   if (!h1Element) {
     console.warn("No H1 found on the page.");
     return { title, url, parts };
   }
 
-  // Assign sentiment ID to H1
+  // Clear previous sentiment attributes from live document
+  document.querySelectorAll("[data-sentiment-id]").forEach((el) => {
+    el.removeAttribute("data-sentiment-id");
+  });
+
+  // Assign sentiment ID to H1 (in the fetched document)
   h1Element.setAttribute("data-sentiment-id", "mh");
   parts.push({ id: "mh", content: h1Element.textContent.trim() });
 
-  // Extract subheadings and paragraphs
+  // Extract subheadings and paragraphs from the fetched document
   let subheadingCounter = 1;
   let paragraphCounter = 1;
   let currentHeading = null;
@@ -69,7 +77,8 @@ function extractAndProcessContent() {
     }
   }
 
-  const contentNodes = Array.from(container.querySelectorAll("h2, h3, h4, h5, h6, p"));
+  // Extract headings and paragraphs from the fetched document
+  const contentNodes = Array.from(doc.querySelectorAll("h2, h3, h4, h5, h6, p"));
   for (let node of contentNodes) {
     if (/^H[2-6]$/.test(node.tagName)) {
       flushParagraphs();
@@ -80,5 +89,6 @@ function extractAndProcessContent() {
   }
   flushParagraphs();
 
+  // Return the processed data
   return { title, url, parts };
 }
