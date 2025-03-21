@@ -1,6 +1,6 @@
 export async function analyzeMultipleSentiment({ sections }) {
   try {
-    const response = await fetch("http://194.47.176.95:8000/get-sentiment-ultra-sections", {
+    const response = await fetch("http://cscloud7-123.lnu.se:8000/get-sentiment-ultra-sections", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ sections }),
@@ -20,7 +20,7 @@ export async function analyzeMultipleSentiment({ sections }) {
 
 export async function analyzeSingleSentiment(text) {
   try {
-    const response = await fetch("http://194.47.176.95:8000/get-sentiment", {
+    const response = await fetch("http://cscloud7-123.lnu.se:8000/get-sentiment", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
