@@ -48,9 +48,10 @@ export function createSingleChart(sentimentData) {
           grid: { display: false },
           title: {
             display: true,
-            text: ``,
+            text: `Sentiment`,
           },
           ticks: {
+            display: false,
             minRotation: 90,
             crossAlign: 'center',
           },
@@ -59,7 +60,7 @@ export function createSingleChart(sentimentData) {
       plugins: {
         title: {
           display: true,
-          text: `Sentiment Score for Heading`,
+          text: `${sentimentData.content}`,
         },
         tooltip: {
           callbacks: {

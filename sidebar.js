@@ -16,16 +16,12 @@ chrome.runtime.onMessage.addListener((message) => {
 document.getElementById("scrapeBtn").addEventListener("click", () => {
   console.log("Scrape button clicked");
   document.getElementById("textInputForm").style.display = "none";
-  document.getElementById("title").style.display = "block";
-  document.getElementById("url").style.display = "block";
   fetchAndProcessPageData(updateSidebar);
 });
 
 document.getElementById("textInputBtn").addEventListener("click", async () => {
   console.log("Text Input button clicked");
   document.getElementById("textInputForm").style.display = "block";
-  document.getElementById("title").style.display = "none";
-  document.getElementById("url").style.display = "none";
   document.getElementById("highlightSentimentBtn").style.display = "none";
 
   setupTextInputMode(async (userInput) => {
@@ -48,16 +44,6 @@ document.getElementById("highlightSentimentBtn").addEventListener("click", async
 });
 
 async function updateSidebar({ title, url, parts }) {
-  document.getElementById("title").innerText = `Title: ${title}`;
-  document.getElementById("url").innerText = `URL: ${url}`;
-
-  if (title === "No data" && url === "No data") {
-    document.getElementById("myChart").style.display = "none";
-    document.getElementById("myPieChart").style.display = "none";
-    document.getElementById("singleChart").style.display = "none";
-    return;
-  }
-
   document.getElementById("myChart").style.display = "block";
   document.getElementById("highlightSentimentBtn").style.display = "block";
   try {
