@@ -114,7 +114,7 @@ export function createMultipleResChart(sentimentData) {
     },
     options: {
       responsive: true,
-      scales: { x: { stacked: true }, y: { stacked: true, title: { display: true, text: "Sentiment Results" } } },
+      scales: { x: { stacked: true }, y: { stacked: true, title: { display: true, text: "Text Parts" }, ticks: { stepSize: 1 } } },
       plugins: { title: { display: true, text: "Sentiment Certainty Distribution" }, legend: { display: false } },
     },
   });
@@ -175,6 +175,16 @@ export function createScatterPlot(sentimentData) {
     borderWidth: 1,
   }));
 
+  // Debugging - Print actual min X before applying adjustments
+  const rawMinX = Math.min(...dataPoints.map((point) => point.x));
+  let minX = Math.max(0.5, Math.floor(rawMinX * 10) / 10);
+  if (minX > 0.5) {
+    minX = 0.5;
+  }
+
+  const rawMaxY = Math.max(...dataPoints.map((point) => point.y));
+  const maxY = Math.max(10, Math.ceil(rawMaxY / 10) * 10);
+
   const data = {
     datasets: [
       {
@@ -205,12 +215,19 @@ export function createScatterPlot(sentimentData) {
       x: {
         type: "linear",
         position: "bottom",
+        min: minX,  
+        max: 1,  
       },
       y: {
         title: {
           display: true,
           text: "Word Count",
         },
+        min: 0,
+        max: maxY,
+        ticks: {
+          stepSize: 1,
+        }
       },
     },
   };
