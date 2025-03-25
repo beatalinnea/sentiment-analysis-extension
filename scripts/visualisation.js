@@ -168,7 +168,7 @@ export function createScatterPlot(sentimentData) {
   const dataPoints = sentimentData.map((item, index) => ({
     x: item.score,
     y: countWords(item.content),
-    id: item.id,
+    id: item?.id || index + 1,
     label: item.label,
     backgroundColor: getColor(item.label, 0.8),
     borderColor: getColor(item.label, 1),
