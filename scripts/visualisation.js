@@ -167,6 +167,8 @@ export function createScatterPlot(sentimentData) {
     id: item.id,
     label: item.label,
     backgroundColor: getColor(item.label, 0.8),
+    borderColor: getColor(item.label, 1),
+    borderWidth: 1,
   }));
 
   const data = {
@@ -174,7 +176,8 @@ export function createScatterPlot(sentimentData) {
       {
         data: dataPoints,
         pointBackgroundColor: dataPoints.map(({ backgroundColor }) => backgroundColor),
-        pointRadius: 3,
+        pointRadius: 4,
+        pointBorderColor: dataPoints.map(({ borderColor }) => borderColor),
       },
     ],
   };
