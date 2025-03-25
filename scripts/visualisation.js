@@ -174,7 +174,7 @@ export function createScatterPlot(sentimentData) {
       {
         data: dataPoints,
         pointBackgroundColor: dataPoints.map(({ backgroundColor }) => backgroundColor),
-        pointRadius: 5,
+        pointRadius: 3,
       },
     ],
   };
@@ -198,8 +198,6 @@ export function createScatterPlot(sentimentData) {
       x: {
         type: "linear",
         position: "bottom",
-        min: 0,
-        max: 1,
       },
       y: {
         title: {
