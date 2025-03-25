@@ -19,38 +19,41 @@ export function createSingleChart(sentimentData) {
     window.singleChart.destroy();
   }
 
-  // Ensure sentimentData is a single object, not an array
-  const sentimentLabels = ["NEGATIVE", "NEUTRAL", "POSITIVE"];
-  const scores = sentimentLabels.map(label => (sentimentData.label === label ? sentimentData.score : 0));
+  const label = sentimentData.label;
+  const score = sentimentData.score;
 
   window.singleChart = new Chart(ctx, {
     type: "bar",
     data: {
-      labels: sentimentLabels,
+      labels: [label],
       datasets: [
         {
           label: "Sentiment Score",
-          data: scores,
-          backgroundColor: sentimentLabels.map(label => getColor(label, 1)),
+          data: [score],
+          backgroundColor: [getColor(label, 1)],
           borderWidth: 0,
         }
       ]
     },
     options: {
       responsive: true,
-      indexAxis: "y", // Horizontal bars
+      indexAxis: "y",
       scales: {
         x: {
           min: 0,
           max: 1,
-          ticks: {
-            stepSize: 0.1,
-            beginAtZero: true,
-          },
           grid: { display: false },
         },
         y: {
           grid: { display: false },
+          title: {
+            display: true,
+            text: ``,
+          },
+          ticks: {
+            minRotation: 90,
+            crossAlign: 'center',
+          },
         }
       },
       plugins: {
