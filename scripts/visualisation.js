@@ -157,10 +157,14 @@ export function createScatterPlot(sentimentData) {
     window.scatterPlot.destroy();
   }
 
+  const countWords = (str) => {
+    return str.trim().split(/\s+/).length;
+  };
+
   const dataPoints = sentimentData.map((item, index) => ({
     x: item.score,
-    y: Math.floor(Math.random() * (512 - 10 + 1)) + 10,
-    id: index + 1,
+    y: countWords(item.content),
+    id: item.id,
     label: item.label,
     backgroundColor: getColor(item.label, 0.8),
   }));
@@ -180,10 +184,9 @@ export function createScatterPlot(sentimentData) {
     plugins: {
       tooltip: {
         callbacks: {
-          title: (context) => context[0].raw.label,
           label: (context) => {
-            const { x, y } = context.raw;
-            return [`Certainty: ${x.toFixed(2)}`, `Word Count: ${y}`];
+            const { label, id, x, y } = context.raw;
+            return [`${label} ${id}`, `Certainty: ${x.toFixed(2)}`, `Word Count: ${y}`];
           },
         },
       },
@@ -199,8 +202,6 @@ export function createScatterPlot(sentimentData) {
         max: 1,
       },
       y: {
-        min: 10,
-        max: 600,
         title: {
           display: true,
           text: "Word Count",

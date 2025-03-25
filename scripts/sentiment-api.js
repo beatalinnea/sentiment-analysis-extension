@@ -11,7 +11,18 @@ export async function analyzeMultipleSentiment({ sections }) {
     }
 
     const data = await response.json();
-    return Array.isArray(data) ? data : [data];
+    return sections.map(section => {
+      const sentiment = data.find(item => item.id === section.id);
+
+      if (sentiment) {
+        return {
+          ...section,
+          score: sentiment.score,
+          label: sentiment.label,
+        };
+      }
+      return section;
+    });
   } catch (error) {
     console.error("Error fetching sentiment analysis:", error);
     return [];
