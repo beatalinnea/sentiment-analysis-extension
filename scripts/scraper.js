@@ -28,7 +28,7 @@ async function extractAndProcessContent() {
   try {
     console.log('extractAndProcessContent is running...');
     const url = window.location.href;
-    const title = document.title;
+    let title = "";
     console.log('Fetching URL:', url);
 
     // Fetch the HTML of the page at the current URL
@@ -58,6 +58,7 @@ async function extractAndProcessContent() {
     // Apply sentiment ID to H1 in the parsed document
     h1Element.setAttribute("data-sentiment-id", "mh");
     parts.push({ id: "mh", content: h1Element.textContent.trim() });
+    title = h1Element.textContent.trim();
 
     // Extract subheadings and paragraphs and apply sentiment attributes in doc
     let subheadingCounter = 1;

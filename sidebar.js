@@ -1,6 +1,6 @@
 import { fetchAndProcessPageData } from "./scripts/scraper.js";
 import { setupTextInputMode } from "./scripts/textInput.js";
-import { analyzeMultipleSentiment, analyzeSingleSentiment } from "./scripts/sentiment-api.js";
+import { analyzeMultipleSentiment } from "./scripts/sentiment-api.js";
 import { createMultipleResChart, createScatterPlot, createSingleChart, clearTitleGraph } from "./scripts/visualisation.js";
 import { highlightSentimentElements } from "./scripts/highlight.js";
 
