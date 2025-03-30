@@ -48,7 +48,7 @@ export function createSingleChart(sentimentData) {
           grid: { display: false },
           title: {
             display: true,
-            text: `Sentiment`,
+            text: `Title Sentiment`,
           },
           ticks: {
             display: false,
@@ -237,6 +237,41 @@ export function createScatterPlot(sentimentData) {
     data,
     options,
   });
+}
+
+export function createProgressLine(sentimentData) {
+  const container = document.getElementById("progressLineContainer");
+  if (!container) return;
+
+  container.innerHTML = ""; // Clear previous content
+  const totalWords = sentimentData.reduce((sum, item) => sum + countWords(item.content), 0);
+  let accumulatedPercentage = 0;
+
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("width", "100%");
+  svg.setAttribute("height", "30");
+
+  sentimentData.forEach((item, index) => {
+    const wordCount = countWords(item.content);
+    const segmentWidth = (wordCount / totalWords) * 100;
+    const xStart = accumulatedPercentage;
+    accumulatedPercentage += segmentWidth;
+
+    const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+    rect.setAttribute("x", `${xStart}%`);
+    rect.setAttribute("y", "5");
+    rect.setAttribute("width", `${segmentWidth}%`);
+    rect.setAttribute("height", "20");
+    rect.setAttribute("fill", getColor(item.label, 1));
+
+    svg.appendChild(rect);
+  });
+
+  container.appendChild(svg);
+}
+
+function countWords(str) {
+  return str.trim().split(/\s+/).length;
 }
 
 // ================================================================================

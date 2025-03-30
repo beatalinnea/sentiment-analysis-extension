@@ -1,7 +1,7 @@
 import { fetchAndProcessPageData } from "./scripts/scraper.js";
 import { setupTextInputMode } from "./scripts/textInput.js";
 import { analyzeMultipleSentiment, analyzeLongFormSentiment } from "./scripts/sentiment-api.js";
-import { createMultipleResChart, createScatterPlot, createSingleChart, clearTitleGraph } from "./scripts/visualisation.js";
+import { createMultipleResChart, createScatterPlot, createSingleChart, clearTitleGraph, createProgressLine } from "./scripts/visualisation.js";
 import { highlightSentimentElements } from "./scripts/highlight.js";
 
 let currentSentimentData = [];
@@ -58,9 +58,11 @@ async function updateSidebar({ title, url, parts }) {
   }
 }
 
-function createCharts(titelItem, sentimentData) {
-  console.log(sentimentData)
-  createSingleChart(titelItem);
+function createCharts(titleItem, sentimentData) {
+  console.log('creating charts', sentimentData)
+  document.getElementById("title").style.display = titleItem ? "block" : "none";
+  document.getElementById("title").innerText = titleItem?.content;
+  createProgressLine(sentimentData);
   createMultipleResChart(sentimentData);
   createScatterPlot(sentimentData);
 }
