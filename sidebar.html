@@ -59,10 +59,13 @@
   #textInputForm .sentiment-buttons {
     justify-content: center; /* Ensure the button is centered */
   }
-  #highlightButtonContainer {
+  #highlightButtonContainer, #toggleChartBtn {
     display: flex;
     justify-content: center;
     width: 100%;
+  }
+  #myPieChart {
+    display: none;
   }
   </style>
 </head>
@@ -86,8 +89,12 @@
 
   <div id="title" style="display:none;"></div>
   <div id="progressLineContainer"></div>
-  <!-- Canvas for Chart.js -->
+
   <canvas id="scatterPlot"></canvas>
+
+  <div id="chartToggleContainer" class="sentiment-buttons" style="display: none;">
+    <button id="toggleChartBtn">Toggle Chart</button>
+  </div>
   <canvas id="myChart"></canvas>
   <canvas id="myPieChart"></canvas>
 
