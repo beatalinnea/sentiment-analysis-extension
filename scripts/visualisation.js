@@ -77,19 +77,21 @@ export function createSingleChart(sentimentData) {
 
 
 export function createMultipleResChart(sentimentData) {
-  const ctx = document.getElementById("myChart").getContext("2d");
+  /// const ctx = document.getElementById("myChart").getContext("2d");
   const ctxPie = document.getElementById("myPieChart").getContext("2d");
 
+  /*
   if (window.myChart instanceof Chart) {
     window.myChart.destroy();
   }
+  */
 
   if (window.myPieChart instanceof Chart) {
     window.myPieChart.destroy();
   }
 
   const processedData = processSentimentData(sentimentData);
-
+/*
   window.myChart = new Chart(ctx, {
     type: "bar",
     data: {
@@ -118,6 +120,7 @@ export function createMultipleResChart(sentimentData) {
       plugins: { title: { display: true, text: "Sentiment Certainty Distribution" }, legend: { display: false } },
     },
   });
+  */
 
   window.myPieChart = new Chart(ctxPie, {
     type: "pie",
@@ -144,7 +147,7 @@ export function createMultipleResChart(sentimentData) {
       plugins: {
         title: {
           display: true,
-          text: "Sentiment Distribution",
+          text: "Sentiment Fördelning",
         },
         legend: {
           display: false,
@@ -203,7 +206,7 @@ export function createScatterPlot(sentimentData) {
         callbacks: {
           label: (context) => {
             const { label, id, x, y } = context.raw;
-            return [`${label} ${id}`, `Certainty: ${x.toFixed(2)}`, `Word Count: ${y}`];
+            return [`${label} ${id}`, `Certainty: ${x.toFixed(2)}`, `Ordantal: ${y}`];
           },
         },
       },
@@ -221,7 +224,7 @@ export function createScatterPlot(sentimentData) {
       y: {
         title: {
           display: true,
-          text: "Word Count",
+          text: "Ordantal",
         },
         min: 0,
         max: maxY,

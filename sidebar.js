@@ -5,7 +5,7 @@ import { createMultipleResChart, createScatterPlot, createSingleChart, clearTitl
 import { highlightSentimentElements } from "./scripts/highlight.js";
 
 let currentSentimentData = [];
-let isPieChartVisible = false;
+// create a state than can hold the previous url
 
 chrome.runtime.onMessage.addListener((message) => {
   if (message.action === "updateSidebar") {
@@ -33,22 +33,6 @@ document.getElementById("textInputBtn").addEventListener("click", async () => {
 document.getElementById("highlightSentimentBtn").addEventListener("click", async () => {
   await highlightSentimentElements(currentSentimentData);
 });
-
-document.getElementById("toggleChartBtn").addEventListener("click", () => {
-  isPieChartVisible = !isPieChartVisible;
-  updateCharts();
-});
-
-function updateCharts() {
-  const hasData = currentSentimentData.length > 0;
-  const toggleContainer = document.getElementById("chartToggleContainer");
-  const barChart = document.getElementById("myChart");
-  const pieChart = document.getElementById("myPieChart");
-
-  toggleContainer.style.display = hasData ? "flex" : "none";
-  barChart.style.display = hasData && !isPieChartVisible ? "block" : "none";
-  pieChart.style.display = hasData && isPieChartVisible ? "block" : "none";
-}
 
 function toggleTextModeOn(boolean) {
   document.getElementById("textInputForm").style.display = boolean ? "block" : "none";
@@ -79,7 +63,6 @@ function createCharts(titleItem, sentimentData) {
   console.log('creating charts', sentimentData)
   document.getElementById("title").style.display = titleItem ? "block" : "none";
   document.getElementById("title").innerText = titleItem?.content;
-  updateCharts();
   createProgressLine(sentimentData);
   createMultipleResChart(sentimentData);
   createScatterPlot(sentimentData);
