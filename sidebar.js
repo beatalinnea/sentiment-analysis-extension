@@ -5,11 +5,14 @@ import { createMultipleResChart, createScatterPlot, createSingleChart, clearTitl
 import { highlightSentimentElements } from "./scripts/highlight.js";
 
 let currentSentimentData = [];
+let textInputMode = false;
 // create a state than can hold the previous url
 
 chrome.runtime.onMessage.addListener((message) => {
   if (message.action === "updateSidebar") {
+    if (!textInputMode) {
     fetchAndProcessPageData(updateSidebar);
+    }
   }
 });
 
@@ -35,6 +38,7 @@ document.getElementById("highlightSentimentBtn").addEventListener("click", async
 });
 
 function toggleTextModeOn(boolean) {
+  textInputMode = boolean;
   document.getElementById("textInputForm").style.display = boolean ? "block" : "none";
   document.getElementById("highlightSentimentBtn").style.display = boolean ? "none" : "block";
 }
