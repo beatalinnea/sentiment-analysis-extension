@@ -5,11 +5,16 @@ export function createPieChart(sentimentData) {
   }
 
   const processedData = processSentimentData(sentimentData);
+  const totalAmountOfSentiment = sentimentData.length;
 
   window.myPieChart = new Chart(ctxPie, {
     type: "pie",
     data: {
-      labels: ["NEGATIVE", "NEUTRAL", "POSITIVE"],
+      labels: [
+        mapLabelToSwedish("NEGATIVE"), 
+        mapLabelToSwedish("NEUTRAL"), 
+        mapLabelToSwedish("POSITIVE")
+      ],
       datasets: [
         {
           label: "Sentiment Distribution",
@@ -30,16 +35,32 @@ export function createPieChart(sentimentData) {
       responsive: true,
       plugins: {
         title: {
-          display: true,
+          display: false,
           text: "Sentiment Fördelning",
         },
         legend: {
           display: false,
         },
+        tooltip: {
+          callbacks: {
+            label: function (context) {
+              const index = context.dataIndex;
+              const value = context.dataset.data[index];
+              const avg = processedData[index].average;
+              const avgPercentage = (avg * 100).toFixed(2);
+
+              return [
+                `${value} st (${((value / totalAmountOfSentiment) * 100).toFixed(2)}%)`,
+                `Genomsnittlig Pålitlighet: ${avgPercentage}%`
+              ];
+            },
+          },
+        },
       },
     },
   });
 }
+
 
 export function createScatterPlot(sentimentData) {
   const ctx = document.getElementById("scatterPlot").getContext("2d");
@@ -53,22 +74,18 @@ export function createScatterPlot(sentimentData) {
   };
 
   const dataPoints = sentimentData.map((item, index) => ({
-    x: item.score,
+    x: item.score * 100,
     y: countWords(item.content),
     id: item?.id || index + 1,
-    label: item.label,
+    label: mapLabelToSwedish(item.label),
     backgroundColor: getColor(item.label, 0.8),
     borderColor: getColor(item.label, 1),
     borderWidth: 1,
   }));
 
-  // Debugging - Print actual min X before applying adjustments
   const rawMinX = Math.min(...dataPoints.map((point) => point.x));
-  let minX = Math.max(0.5, Math.floor(rawMinX * 10) / 10);
-  if (minX > 0.5) {
-    minX = 0.5;
-  }
-
+  // Math ceil to closet 10
+  const minX = Math.max(0, Math.floor(rawMinX / 10) * 10);
   const rawMaxY = Math.max(...dataPoints.map((point) => point.y));
   const maxY = Math.max(10, Math.ceil(rawMaxY / 10) * 10);
 
@@ -91,7 +108,7 @@ export function createScatterPlot(sentimentData) {
           label: (context) => {
             const { label, id, x, y } = context.raw;
             highlightProgressLineBorder(id);
-            return [`${label} ${id}`, `Certainty: ${x.toFixed(2)}`, `Ordantal: ${y}`];
+            return [`${label}`, `Pålitlighet: ${x.toFixed(2)}%`, `Ordantal: ${y}`];
           },
         },
       },
@@ -109,7 +126,7 @@ export function createScatterPlot(sentimentData) {
         type: "linear",
         position: "bottom",
         min: minX,  
-        max: 1,  
+        max: 100,  
       },
       y: {
         title: {
@@ -119,7 +136,7 @@ export function createScatterPlot(sentimentData) {
         min: 0,
         max: maxY,
         ticks: {
-          stepSize: 1,
+          stepSize: 10,
         }
       },
     },
@@ -223,13 +240,23 @@ function countWords(str) {
 function processSentimentData(sentimentData) {
   const sentimentLabels = ["NEGATIVE", "NEUTRAL", "POSITIVE"];
 
-  return sentimentLabels.map(label => ({
-    label,
-    low: sentimentData.filter(d => d.label === label && d.score <= 0.5).length,
-    medium: sentimentData.filter(d => d.label === label && d.score > 0.5 && d.score <= 0.7).length,
-    high: sentimentData.filter(d => d.label === label && d.score > 0.7).length,
-  }));
+  return sentimentLabels.map(label => {
+    const filtered = sentimentData.filter(d => d.label === label);
+    const scores = filtered.map(d => d.score);
+    const average = scores.length > 0
+      ? scores.reduce((sum, s) => sum + s, 0) / scores.length
+      : 0;
+
+    return {
+      label,
+      low: filtered.filter(d => d.score <= 0.5).length,
+      medium: filtered.filter(d => d.score > 0.5 && d.score <= 0.7).length,
+      high: filtered.filter(d => d.score > 0.7).length,
+      average
+    };
+  });
 }
+
 
 function getColor(label, threshold) {
   const baseColors = {
@@ -241,4 +268,17 @@ function getColor(label, threshold) {
   const [r, g, b] = baseColors[label];
   const intensity = threshold * 0.8 + 0.2;
   return `rgba(${r}, ${g}, ${b}, ${intensity})`;
+}
+
+function mapLabelToSwedish(label) {
+  switch (label) {
+    case "NEGATIVE":
+      return "NEGATIV";
+    case "NEUTRAL":
+      return "NEUTRAL";
+    case "POSITIVE":
+      return "POSITIV";
+    default:
+      return label;
+  }
 }
