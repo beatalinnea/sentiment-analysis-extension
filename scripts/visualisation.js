@@ -1,4 +1,7 @@
 import { highlightSectionInText, resetSectionHighlightInText } from "./highlight.js";
+import { getColor } from "../utils/colors.js";
+import { mapLabelToSwedish } from "../utils/mapLabels.js";
+
 export function createPieChart(sentimentData) {
   const ctxPie = document.getElementById("myPieChart").getContext("2d");
   if (window.myPieChart instanceof Chart) {
@@ -20,14 +23,14 @@ export function createPieChart(sentimentData) {
         {
           label: "Sentiment Distribution",
           data: [
-            processedData[0].low + processedData[0].medium + processedData[0].high, // NEGATIVE total
-            processedData[1].low + processedData[1].medium + processedData[1].high, // NEUTRAL total
-            processedData[2].low + processedData[2].medium + processedData[2].high, // POSITIVE total
+            processedData[0].amountOfTexts, // NEGATIVE total
+            processedData[1].amountOfTexts, // NEUTRAL total
+            processedData[2].amountOfTexts, // POSITIVE total
           ],
           backgroundColor: [
-            getColor("NEGATIVE", 0.5),
-            getColor("NEUTRAL", 0.7),
-            getColor("POSITIVE", 1.0),
+            getColor(processedData[0].label, processedData[0].average),
+            getColor(processedData[1].label, processedData[1].average),
+            getColor(processedData[2].label, processedData[2].average),
           ],
         },
       ],
@@ -78,8 +81,9 @@ export function createScatterPlot(sentimentData) {
     x: item.score * 100,
     y: countWords(item.content),
     id: item?.id || index + 1,
+    originalLabel: item.label,
     label: mapLabelToSwedish(item.label),
-    backgroundColor: getColor(item.label, 0.8),
+    backgroundColor: getColor(item.label, item.score),
     borderColor: getColor(item.label, 1),
     borderWidth: 1,
   }));
@@ -107,9 +111,9 @@ export function createScatterPlot(sentimentData) {
       tooltip: {
         callbacks: {
           label: (context) => {
-            const { label, id, x, y } = context.raw;
-            highlightProgressLineBorder(id);
-            return [`${label}`, `Pålitlighet: ${x.toFixed(2)}%`, `Ordantal: ${y}`];
+            const { originalLabel, label, id, x, y } = context.raw;
+            highlightProgressLineBorder(id, originalLabel);
+            return [`${label}`, `Pålitlighet: ${x.toFixed(2)}%`, `Antal ord: ${y}`];
           },
         },
       },
@@ -132,7 +136,7 @@ export function createScatterPlot(sentimentData) {
       y: {
         title: {
           display: true,
-          text: "Ordantal",
+          text: "Antal ord",
         },
         min: 0,
         max: maxY,
@@ -173,7 +177,7 @@ export function createProgressLine(sentimentData) {
     rect.setAttribute("y", "5");
     rect.setAttribute("width", `${segmentWidth}%`);
     rect.setAttribute("height", "20");
-    rect.setAttribute("fill", getColor(item.label, 1));
+    rect.setAttribute("fill", getColor(item.label, item.score));
     rect.setAttribute("value", item.id);
     rect.addEventListener("mouseover", () => handleProgressLineHover(item.id));
     rect.addEventListener("mouseout", () => resetScatterPlot());
@@ -205,9 +209,9 @@ function resetScatterPlot() {
   window.scatterPlot.update();
 }
 
-function highlightProgressLineBorder(id) {
+function highlightProgressLineBorder(id, label) {
   resetProgressLineBorders();
-  highlightSectionInText(id);
+  highlightSectionInText(id, label);
   const progressLineElements = document.querySelectorAll("rect");
   progressLineElements.forEach((rect) => {
     const rectId = rect.getAttribute("value");
@@ -241,9 +245,7 @@ function processSentimentData(sentimentData) {
 
     return {
       label,
-      low: filtered.filter(d => d.score <= 0.5).length,
-      medium: filtered.filter(d => d.score > 0.5 && d.score <= 0.7).length,
-      high: filtered.filter(d => d.score > 0.7).length,
+      amountOfTexts: filtered.length,
       average
     };
   });
@@ -251,29 +253,4 @@ function processSentimentData(sentimentData) {
 
 function countWords(str) {
   return str.trim().split(/\s+/).length;
-}
-
-function getColor(label, threshold) {
-  const baseColors = {
-    NEGATIVE: [255, 99, 132], // Red
-    NEUTRAL: [54, 162, 235], // Blue
-    POSITIVE: [75, 192, 132]  // Green
-  };
-
-  const [r, g, b] = baseColors[label];
-  const intensity = threshold * 0.8 + 0.2;
-  return `rgba(${r}, ${g}, ${b}, ${intensity})`;
-}
-
-export function mapLabelToSwedish(label) {
-  switch (label) {
-    case "NEGATIVE":
-      return "NEGATIV";
-    case "NEUTRAL":
-      return "NEUTRAL";
-    case "POSITIVE":
-      return "POSITIV";
-    default:
-      return label;
-  }
 }

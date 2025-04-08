@@ -1,8 +1,9 @@
 import { fetchAndProcessPageData } from "./scripts/scraper.js";
 import { setupTextInputMode } from "./scripts/textInput.js";
 import { analyzeMultipleSentiment, analyzeLongFormSentiment } from "./scripts/sentiment-api.js";
-import { createPieChart, createScatterPlot, createProgressLine, mapLabelToSwedish } from "./scripts/visualisation.js";
+import { createPieChart, createScatterPlot, createProgressLine } from "./scripts/visualisation.js";
 import { highlightSentimentElements, clearSentimentHighlightsInTab } from "./scripts/highlight.js";
+import { mapLabelToSwedish } from "./utils/mapLabels.js";
 
 let currentSentimentData = [];
 let textInputMode = false;
