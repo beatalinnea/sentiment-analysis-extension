@@ -40,10 +40,11 @@ async function extractAndProcessContent() {
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, 'text/html');
     console.log('Parsed document:', doc);
+    const container = doc.querySelector("article") || doc.body
 
     // Process the parsed document to extract content and add sentiment attributes
     const parts = [];
-    const h1Element = doc.querySelector("h1");
+    const h1Element = container.querySelector("h1");
 
     if (!h1Element) {
       console.warn("No H1 found on the page.");
@@ -84,7 +85,7 @@ async function extractAndProcessContent() {
     }
 
     // Extract headings and paragraphs from the fetched document
-    const contentNodes = Array.from(doc.querySelectorAll("h2, h3, h4, h5, h6, p"));
+    const contentNodes = Array.from(container.querySelectorAll("h2, h3, h4, h5, h6, p"));
     console.log('Extracting content nodes...');
     for (let node of contentNodes) {
       if (/^H[2-6]$/.test(node.tagName)) {
