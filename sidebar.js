@@ -2,14 +2,14 @@ import { fetchAndProcessPageData } from "./scripts/scraper.js";
 import { setupTextInputMode } from "./scripts/textInput.js";
 import { analyzeMultipleSentiment, analyzeLongFormSentiment } from "./scripts/sentiment-api.js";
 import { createMultipleResChart, createScatterPlot, createSingleChart, clearTitleGraph, createProgressLine } from "./scripts/visualisation.js";
-import { highlightSentimentElements } from "./scripts/highlight.js";
+import { highlightSentimentElements, clearSentimentHighlightsInTab } from "./scripts/highlight.js";
 
 let currentSentimentData = [];
 let textInputMode = false;
-// create a state than can hold the previous url
 
 chrome.runtime.onMessage.addListener((message) => {
   if (message.action === "updateSidebar") {
+    clearSentimentHighlightsInTab();
     if (!textInputMode) {
     fetchAndProcessPageData(updateSidebar);
     }

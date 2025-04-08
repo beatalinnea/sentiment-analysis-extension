@@ -38,3 +38,19 @@ function applySentimentHighlighting(currentSentimentData) {
     element.style.backgroundColor = color;
   });
 }
+
+export async function clearSentimentHighlightsInTab() {
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    if (tabs.length === 0) return;
+    chrome.scripting.executeScript({
+      target: { tabId: tabs[0].id },
+      func: () => {
+        document.querySelectorAll("[data-sentiment-id]").forEach((el) => {
+          el.removeAttribute("data-sentiment-id");
+          el.style.backgroundColor = "transparent";
+        });
+        console.log("Cleared highlights on the page");
+      }
+    });
+  });
+}
