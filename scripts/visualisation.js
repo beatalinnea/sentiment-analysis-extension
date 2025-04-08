@@ -265,7 +265,7 @@ function getColor(label, threshold) {
   return `rgba(${r}, ${g}, ${b}, ${intensity})`;
 }
 
-function mapLabelToSwedish(label) {
+export function mapLabelToSwedish(label) {
   switch (label) {
     case "NEGATIVE":
       return "NEGATIV";
