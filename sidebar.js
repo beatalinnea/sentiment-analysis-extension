@@ -64,7 +64,7 @@ const toggleHighlightButtonText = () => {
 function toggleTextModeOn(boolean) {
   textInputMode = boolean;
   document.getElementById("textInputForm").style.display = boolean ? "block" : "none";
-  document.getElementById("highlightSentimentBtn").style.display = boolean || currentSentimentData.length === 0 ? "none" : "block";
+  document.getElementById("highlightSentimentBtn").style.display = boolean || (!boolean && currentSentimentData.length === 0) ? "none" : "block";
 }
 
 async function updateSidebarLongform(text) {
@@ -95,7 +95,9 @@ function visualiseInSidepanel(titleItem, sentimentData) {
     document.getElementById("highlightSentimentBtn").style.display = "none";
     emptyMessageElement.style.display = "flex";  // Show the overlay
   } else {
-    document.getElementById("highlightSentimentBtn").style.display = "block";
+    if (!textInputMode) {
+      document.getElementById("highlightSentimentBtn").style.display = "block";
+    }
     emptyMessageElement.style.display = "none"; // Hide the overlay
   }
   document.getElementById("title").style.display = titleItem ? "block" : "none";
