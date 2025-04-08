@@ -16,6 +16,7 @@ const runEverything = async () => {
   fetchAndProcessPageData(updateSidebar);
   }
 }
+
 // query on initial load:
 chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
   const tab = tabs[0];

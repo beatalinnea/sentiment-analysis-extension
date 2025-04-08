@@ -1,6 +1,4 @@
 export async function highlightSentimentElements(currentSentimentData) {
-  console.log("Sending sentiment data to content script:", currentSentimentData);
-
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     if (tabs.length === 0) return;
     chrome.scripting.executeScript({
@@ -12,8 +10,6 @@ export async function highlightSentimentElements(currentSentimentData) {
 }
 
 function applySentimentHighlighting(currentSentimentData) {
-  console.log("Applying sentiment highlighting on the webpage", currentSentimentData);
-
   document.querySelectorAll("[data-sentiment-id]").forEach((element) => {
     const sentimentId = element.getAttribute("data-sentiment-id");
     const sentimentObj = currentSentimentData.find((item) => item.id === sentimentId);
@@ -48,7 +44,6 @@ export async function clearSentimentHighlightsInTab() {
         document.querySelectorAll("[data-sentiment-id]").forEach((el) => {
           el.style.backgroundColor = "transparent";
         });
-        console.log("Cleared highlights on the page");
       }
     });
   });
