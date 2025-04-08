@@ -8,14 +8,25 @@ let currentSentimentData = [];
 let textInputMode = false;
 let isHighlighted = false;
 
+const runEverything = async () => {
+  isHighlighted = false;
+  toggleHighlightButtonText();
+  clearSentimentHighlightsInTab();
+  if (!textInputMode) {
+  fetchAndProcessPageData(updateSidebar);
+  }
+}
+// query on initial load:
+chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+  const tab = tabs[0];
+  if (tab && tab.url) {
+    runEverything();
+  }
+});
+
 chrome.runtime.onMessage.addListener((message) => {
   if (message.action === "updateSidebar") {
-    isHighlighted = false;
-    toggleHighlightButtonText();
-    clearSentimentHighlightsInTab();
-    if (!textInputMode) {
-    fetchAndProcessPageData(updateSidebar);
-    }
+    runEverything();
   }
 });
 

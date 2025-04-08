@@ -8,6 +8,12 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   }
 });
 
+chrome.tabs.onActivated.addListener((activeInfo) => {
+  chrome.tabs.get(activeInfo.tabId, (tab) => {
+    updateUrl(tab.url);
+  });
+});
+
 function updateUrl(url) {
   chrome.runtime.sendMessage({ action: "updateSidebar", url: url })
 }
