@@ -1,4 +1,4 @@
-export function createMultipleResChart(sentimentData) {
+export function createPieChart(sentimentData) {
   const ctxPie = document.getElementById("myPieChart").getContext("2d");
   if (window.myPieChart instanceof Chart) {
     window.myPieChart.destroy();
@@ -130,7 +130,7 @@ export function createProgressLine(sentimentData) {
   const container = document.getElementById("progressLineContainer");
   if (!container) return;
 
-  container.innerHTML = ""; // Clear previous content
+  container.innerHTML = "";
   const totalWords = sentimentData.reduce((sum, item) => sum + countWords(item.content), 0);
   let accumulatedPercentage = 0;
 
@@ -150,12 +150,36 @@ export function createProgressLine(sentimentData) {
     rect.setAttribute("width", `${segmentWidth}%`);
     rect.setAttribute("height", "20");
     rect.setAttribute("fill", getColor(item.label, 1));
+    rect.addEventListener("mouseover", () => handleProgressLineHover(item.id));
+    rect.addEventListener("mouseout", () => resetScatterPlot());
 
     svg.appendChild(rect);
   });
-
   container.appendChild(svg);
 }
+
+function handleProgressLineHover(id) {
+  const scatterPlotData = window.scatterPlot.data.datasets[0].data;
+  const pointIndex = scatterPlotData.findIndex((point) => point.id === id);
+  
+  if (pointIndex === -1) return;
+
+  window.scatterPlot.tooltip.setActiveElements(
+    [{
+      datasetIndex: 0,
+      index: pointIndex
+    }],
+    { x: 0, y: 0 }
+  );
+
+  window.scatterPlot.update();
+}
+
+function resetScatterPlot() {
+  window.scatterPlot.tooltip.setActiveElements([], { x: 0, y: 0 });
+  window.scatterPlot.update();
+}
+
 
 function countWords(str) {
   return str.trim().split(/\s+/).length;

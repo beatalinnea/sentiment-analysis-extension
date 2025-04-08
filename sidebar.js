@@ -1,7 +1,7 @@
 import { fetchAndProcessPageData } from "./scripts/scraper.js";
 import { setupTextInputMode } from "./scripts/textInput.js";
 import { analyzeMultipleSentiment, analyzeLongFormSentiment } from "./scripts/sentiment-api.js";
-import { createMultipleResChart, createScatterPlot, createProgressLine } from "./scripts/visualisation.js";
+import { createPieChart, createScatterPlot, createProgressLine } from "./scripts/visualisation.js";
 import { highlightSentimentElements, clearSentimentHighlightsInTab } from "./scripts/highlight.js";
 
 let currentSentimentData = [];
@@ -103,6 +103,6 @@ function visualiseInSidepanel(titleItem, sentimentData) {
   document.getElementById("title").style.display = titleItem ? "block" : "none";
   document.getElementById("title").innerText = titleItem?.content;
   createProgressLine(sentimentData);
-  createMultipleResChart(sentimentData);
+  createPieChart(sentimentData);
   createScatterPlot(sentimentData);
 }
