@@ -1,7 +1,7 @@
 import { fetchAndProcessPageData } from "./scripts/scraper.js";
 import { setupTextInputMode } from "./scripts/textInput.js";
 import { analyzeMultipleSentiment, analyzeLongFormSentiment } from "./scripts/sentiment-api.js";
-import { createMultipleResChart, createScatterPlot, createSingleChart, clearTitleGraph, createProgressLine } from "./scripts/visualisation.js";
+import { createMultipleResChart, createScatterPlot, createProgressLine } from "./scripts/visualisation.js";
 import { highlightSentimentElements, clearSentimentHighlightsInTab } from "./scripts/highlight.js";
 
 let currentSentimentData = [];
