@@ -6,9 +6,12 @@ import { highlightSentimentElements, clearSentimentHighlightsInTab } from "./scr
 
 let currentSentimentData = [];
 let textInputMode = false;
+let isHighlighted = false;
 
 chrome.runtime.onMessage.addListener((message) => {
   if (message.action === "updateSidebar") {
+    isHighlighted = false;
+    toggleHighlightButtonText();
     clearSentimentHighlightsInTab();
     if (!textInputMode) {
     fetchAndProcessPageData(updateSidebar);
@@ -34,8 +37,18 @@ document.getElementById("textInputBtn").addEventListener("click", async () => {
 });
 
 document.getElementById("highlightSentimentBtn").addEventListener("click", async () => {
-  await highlightSentimentElements(currentSentimentData);
+  isHighlighted ? isHighlighted = false : isHighlighted = true;
+  toggleHighlightButtonText();
+  if (!isHighlighted) {
+    await clearSentimentHighlightsInTab();
+  } else {
+    await highlightSentimentElements(currentSentimentData);
+  }
 });
+
+const toggleHighlightButtonText = () => {
+  document.getElementById("highlightSentimentBtn").innerText = isHighlighted ? "Ta bort markeringar" : "Färgmarkera";
+}
 
 function toggleTextModeOn(boolean) {
   textInputMode = boolean;
@@ -47,7 +60,8 @@ async function updateSidebarLongform(text) {
   try {
     const sentimentData = await analyzeLongFormSentiment(text);
     currentSentimentData = [sentimentData]; 
-    createCharts(currentSentimentData[0], currentSentimentData);
+    const title = { content: `Denna text är ${sentimentData.label}`};
+    createCharts(title, currentSentimentData);
   } catch (error) {
     console.error("Error fetching sentiment analysis:", error);
   }
@@ -64,7 +78,6 @@ async function updateSidebar({ title, url, parts }) {
 }
 
 function createCharts(titleItem, sentimentData) {
-  console.log('creating charts', sentimentData)
   document.getElementById("title").style.display = titleItem ? "block" : "none";
   document.getElementById("title").innerText = titleItem?.content;
   createProgressLine(sentimentData);

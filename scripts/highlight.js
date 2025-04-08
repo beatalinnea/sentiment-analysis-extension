@@ -46,7 +46,6 @@ export async function clearSentimentHighlightsInTab() {
       target: { tabId: tabs[0].id },
       func: () => {
         document.querySelectorAll("[data-sentiment-id]").forEach((el) => {
-          el.removeAttribute("data-sentiment-id");
           el.style.backgroundColor = "transparent";
         });
         console.log("Cleared highlights on the page");
