@@ -34,6 +34,7 @@
     margin-bottom: 10px; /* Space below the buttons */
   }
   .sentiment-buttons button {
+    width: 50vw;
     padding: 10px 15px;
     font-size: 1rem;
     cursor: pointer;
@@ -54,7 +55,9 @@
   #textInputForm textarea {
     width: 100%;
     max-width: 300px;
-    margin-bottom: 10px;
+    min-height: 50px;
+    max-height: 100px; 
+    resize: none;
   }
   #textInputForm .sentiment-buttons {
     justify-content: center; /* Ensure the button is centered */
@@ -98,10 +101,6 @@
     <button id="textInputBtn">Fritext</button>
   </div>
 
-  <div class="sentiment-buttons" id="highlightButtonContainer">
-    <button id="highlightSentimentBtn">Färgmarkera</button>
-  </div>
-
   <div id="textInputForm" style="display:none;">
     <textarea id="userText" placeholder="Fyll i text här..."></textarea>
     <div class="sentiment-buttons">
@@ -110,6 +109,10 @@
   </div>
 
   <section>
+    <hr></hr>
+    <div class="sentiment-buttons" id="highlightButtonContainer">
+      <button id="highlightSentimentBtn">Färgmarkera</button>
+    </div>
     <div id="emptyMessage" style="display: none;">kunde inte läsa in text</div>
     <div id="title" style="display:none;"></div>
     <div id="progressLineContainer"></div>
