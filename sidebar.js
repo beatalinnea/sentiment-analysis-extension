@@ -64,7 +64,7 @@ const toggleHighlightButtonText = () => {
 function toggleTextModeOn(boolean) {
   textInputMode = boolean;
   document.getElementById("textInputForm").style.display = boolean ? "block" : "none";
-  document.getElementById("highlightSentimentBtn").style.display = boolean ? "none" : "block";
+  document.getElementById("highlightSentimentBtn").style.display = boolean || currentSentimentData.length === 0 ? "none" : "block";
 }
 
 async function updateSidebarLongform(text) {
@@ -72,7 +72,7 @@ async function updateSidebarLongform(text) {
     const sentimentData = await analyzeLongFormSentiment(text);
     currentSentimentData = [sentimentData]; 
     const title = { content: `Denna text är ${sentimentData.label}`};
-    createCharts(title, currentSentimentData);
+    visualiseInSidepanel(title, currentSentimentData);
   } catch (error) {
     console.error("Error fetching sentiment analysis:", error);
   }
@@ -82,13 +82,22 @@ async function updateSidebar({ title, url, parts }) {
   try {
     currentSentimentData = await analyzeMultipleSentiment({ sections: parts });
     const mhSentiment = currentSentimentData.find((item) => item.id === "mh");
-    createCharts(mhSentiment, currentSentimentData);
+    visualiseInSidepanel(mhSentiment, currentSentimentData);
   } catch (error) {
     console.error("Error fetching sentiment analysis:", error);
   }
 }
 
-function createCharts(titleItem, sentimentData) {
+function visualiseInSidepanel(titleItem, sentimentData) {
+  const emptyMessageElement = document.getElementById("emptyMessage");
+  if (sentimentData.length === 0) {
+    // Show empty message if no sentiment data found
+    document.getElementById("highlightSentimentBtn").style.display = "none";
+    emptyMessageElement.style.display = "flex";  // Show the overlay
+  } else {
+    document.getElementById("highlightSentimentBtn").style.display = "block";
+    emptyMessageElement.style.display = "none"; // Hide the overlay
+  }
   document.getElementById("title").style.display = titleItem ? "block" : "none";
   document.getElementById("title").innerText = titleItem?.content;
   createProgressLine(sentimentData);
