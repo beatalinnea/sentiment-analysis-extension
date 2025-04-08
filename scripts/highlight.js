@@ -43,8 +43,43 @@ export async function clearSentimentHighlightsInTab() {
       func: () => {
         document.querySelectorAll("[data-sentiment-id]").forEach((el) => {
           el.style.backgroundColor = "transparent";
+          el.style.boxShadow = "";
         });
       }
     });
   });
 }
+
+// set border to id element in text with executeScrtipt
+export async function highlightSectionInText(id) {
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    if (tabs.length === 0) return;
+    chrome.scripting.executeScript({
+      target: { tabId: tabs[0].id },
+      func: (id) => {
+        const element = document.querySelector(`[data-sentiment-id="${id}"]`);
+        if (element) {
+          element.style.boxShadow = "0 0 10px 2px red";
+        }
+      },
+      args: [id],
+    });
+  });
+}
+// remove border from all elements in text with executeScrtipt
+export async function resetSectionHighlightInText() {
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    if (tabs.length === 0) return;
+    chrome.scripting.executeScript({
+      target: { tabId: tabs[0].id },
+      func: () => {
+        const elements = document.querySelectorAll("[data-sentiment-id]");
+        elements.forEach((el) => {
+          el.style.boxShadow = "";
+        });
+      },
+    });
+  });
+}
+
+

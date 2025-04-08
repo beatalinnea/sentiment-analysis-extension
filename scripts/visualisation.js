@@ -1,3 +1,4 @@
+import { highlightSectionInText, resetSectionHighlightInText } from "./highlight.js";
 export function createPieChart(sentimentData) {
   const ctxPie = document.getElementById("myPieChart").getContext("2d");
   if (window.myPieChart instanceof Chart) {
@@ -206,6 +207,7 @@ function resetScatterPlot() {
 
 function highlightProgressLineBorder(id) {
   resetProgressLineBorders();
+  highlightSectionInText(id);
   const progressLineElements = document.querySelectorAll("rect");
   progressLineElements.forEach((rect) => {
     const rectId = rect.getAttribute("value");
@@ -219,16 +221,11 @@ function highlightProgressLineBorder(id) {
 // Function to reset all borders in the progress line
 function resetProgressLineBorders() {
   const progressLineElements = document.querySelectorAll("rect");
-
+  resetSectionHighlightInText();
   progressLineElements.forEach((rect) => {
     rect.setAttribute("stroke", "none"); // Remove any borders
   });
 }
-
-function countWords(str) {
-  return str.trim().split(/\s+/).length;
-}
-
 // ================================================================================
 // =============================== HELPER FUNCTIONS ===============================
 // ================================================================================
@@ -252,6 +249,9 @@ function processSentimentData(sentimentData) {
   });
 }
 
+function countWords(str) {
+  return str.trim().split(/\s+/).length;
+}
 
 function getColor(label, threshold) {
   const baseColors = {
