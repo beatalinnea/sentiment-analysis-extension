@@ -90,6 +90,7 @@ export function createScatterPlot(sentimentData) {
         callbacks: {
           label: (context) => {
             const { label, id, x, y } = context.raw;
+            highlightProgressLineBorder(id);
             return [`${label} ${id}`, `Certainty: ${x.toFixed(2)}`, `Ordantal: ${y}`];
           },
         },
@@ -97,6 +98,11 @@ export function createScatterPlot(sentimentData) {
       legend: {
         display: false,
       },
+    },
+    onHover: (event, elements) => {
+      if (elements.length === 0) {
+        resetProgressLineBorders();
+      }
     },
     scales: {
       x: {
@@ -150,9 +156,10 @@ export function createProgressLine(sentimentData) {
     rect.setAttribute("width", `${segmentWidth}%`);
     rect.setAttribute("height", "20");
     rect.setAttribute("fill", getColor(item.label, 1));
+    rect.setAttribute("value", item.id);
+    console.log("Rect value:", item.id);
     rect.addEventListener("mouseover", () => handleProgressLineHover(item.id));
     rect.addEventListener("mouseout", () => resetScatterPlot());
-
     svg.appendChild(rect);
   });
   container.appendChild(svg);
@@ -176,10 +183,35 @@ function handleProgressLineHover(id) {
 }
 
 function resetScatterPlot() {
+  resetProgressLineBorders();
   window.scatterPlot.tooltip.setActiveElements([], { x: 0, y: 0 });
   window.scatterPlot.update();
 }
 
+function highlightProgressLineBorder(id) {
+  resetProgressLineBorders(); // Reset all borders first
+  const progressLineElements = document.querySelectorAll("rect"); // Assuming progress line elements are SVG <rect> elements
+  console.log("Highlighting progress line for ID:", id);
+  console.log("Progress line elements:", progressLineElements);
+
+  progressLineElements.forEach((rect) => {
+    const rectId = rect.getAttribute("value"); // Assuming each <rect> element has a 'value' attribute that corresponds to the sentiment ID
+    console.log("Checking rect with value:", rectId); 
+    if (rectId === id) {
+      rect.setAttribute("stroke", "rgba(0, 0, 0, 0.9)"); // Add a black border (or any color you want)
+      rect.setAttribute("stroke-width", "1"); // Adjust stroke width as needed
+    }
+  });
+}
+
+// Function to reset all borders in the progress line
+function resetProgressLineBorders() {
+  const progressLineElements = document.querySelectorAll("rect");
+
+  progressLineElements.forEach((rect) => {
+    rect.setAttribute("stroke", "none"); // Remove any borders
+  });
+}
 
 function countWords(str) {
   return str.trim().split(/\s+/).length;
