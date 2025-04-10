@@ -1,6 +1,6 @@
 export async function analyzeMultipleSentiment({ sections }) {
   try {
-    const response = await fetch("http://cscloud6-95.lnu.se:8000/get-sentiment-ultra-sections", {
+    const response = await fetch("http://cscloud6-95.lnu.se/api/v2/sentimentis/get-sentiment-ultra-sections", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ sections }),
@@ -31,7 +31,7 @@ export async function analyzeMultipleSentiment({ sections }) {
 
 export async function analyzeLongFormSentiment(content) {
   try {
-    const response = await fetch("http://cscloud6-95.lnu.se:8000/get-sentiment-long-form", {
+    const response = await fetch("http://cscloud6-95.lnu.se/api/v2/sentimentis/get-sentiment-long-form", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ "text": content }),
