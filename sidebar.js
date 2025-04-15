@@ -125,3 +125,27 @@ function visualiseInSidepanel(titleItem, sentimentData) {
   isLoading = false;
   toggleLoadingOverlay();
 }
+
+document.getElementById("instructionsBtn").addEventListener("click", () => {
+  document.getElementById("infoBtn").classList.remove("active");
+  document.getElementById("instructionsBtn").classList.toggle("active");
+  document.getElementById("infoText").style.display = "none";
+  document.getElementById("instructionsText").style.display = document.getElementById("instructionsBtn").classList.contains("active") ? "block" : "none";
+  if (document.getElementById("instructionsBtn").classList.contains("active") || document.getElementById("infoBtn").classList.contains("active")) {
+    document.getElementById("textDisplay").style.display = "block";
+  } else {
+    document.getElementById("textDisplay").style.display = "none";
+  }
+});
+
+document.getElementById("infoBtn").addEventListener("click", () => {
+  document.getElementById("instructionsBtn").classList.remove("active");
+  document.getElementById("infoBtn").classList.toggle("active");
+  document.getElementById("instructionsText").style.display = "none";
+  document.getElementById("infoText").style.display = document.getElementById("infoBtn").classList.contains("active") ? "block" : "none";
+  if (document.getElementById("instructionsBtn").classList.contains("active") || document.getElementById("infoBtn").classList.contains("active")) {
+    document.getElementById("textDisplay").style.display = "block";
+  } else {
+    document.getElementById("textDisplay").style.display = "none";
+  }
+});
