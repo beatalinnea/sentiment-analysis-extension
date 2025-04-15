@@ -36,6 +36,9 @@ chrome.runtime.onMessage.addListener((message) => {
 });
 
 document.getElementById("scrapeBtn").addEventListener("click", () => {
+  if (!textInputMode) {
+    return;
+  }
   toggleTextModeOn(false);
   isLoading = true;
   toggleLoadingOverlay();
