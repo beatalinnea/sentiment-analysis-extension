@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Sentimentīs",
+  "name": "sentimentīs",
   "version": "1.0",
   "description": "Scrapes the page title and URL in a sidebar.",
   "permissions": ["activeTab", "sidePanel", "scripting", "tabs"],
