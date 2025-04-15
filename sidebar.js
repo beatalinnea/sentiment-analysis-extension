@@ -8,13 +8,16 @@ import { mapLabelToSwedish } from "./utils/mapLabels.js";
 let currentSentimentData = [];
 let textInputMode = false;
 let isHighlighted = false;
+let isLoading = true;
 
 const runEverything = async () => {
   isHighlighted = false;
   toggleHighlightButtonText();
   clearSentimentHighlightsInTab();
   if (!textInputMode) {
-  fetchAndProcessPageData(updateSidebar);
+    isLoading = true;
+    toggleLoadingOverlay();
+    fetchAndProcessPageData(updateSidebar);
   }
 }
 
@@ -34,6 +37,8 @@ chrome.runtime.onMessage.addListener((message) => {
 
 document.getElementById("scrapeBtn").addEventListener("click", () => {
   toggleTextModeOn(false);
+  isLoading = true;
+  toggleLoadingOverlay();
   fetchAndProcessPageData(updateSidebar);
 });
 
@@ -42,6 +47,8 @@ document.getElementById("textInputBtn").addEventListener("click", async () => {
 
   setupTextInputMode(async (userInput) => {
     try {
+      isLoading = true;
+      toggleLoadingOverlay();
       await updateSidebarLongform(userInput);
     } catch (error) {
       console.error("Error analyzing sentiment:", error);
@@ -58,6 +65,11 @@ document.getElementById("highlightSentimentBtn").addEventListener("click", async
     await highlightSentimentElements(currentSentimentData);
   }
 });
+
+function toggleLoadingOverlay() {
+  const overlay = document.getElementById("loadingOverlay");
+  overlay.style.display = isLoading ? "flex" : "none";
+}
 
 const toggleHighlightButtonText = () => {
   document.getElementById("highlightSentimentBtn").innerText = isHighlighted ? "Ta bort markeringar" : "Färgmarkera";
@@ -108,4 +120,6 @@ function visualiseInSidepanel(titleItem, sentimentData) {
   createProgressLine(sentimentData);
   createPieChart(sentimentData);
   createScatterPlot(sentimentData);
+  isLoading = false;
+  toggleLoadingOverlay();
 }
