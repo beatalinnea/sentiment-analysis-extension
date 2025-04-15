@@ -20,12 +20,12 @@
     }
 
     p {
-      font-weight: bold;
       word-wrap: break-word;
+      text-align: center;
     }
 
     canvas {
-      margin-top: 20px;
+      margin-top: 10px;
       width: 100%;
     }
 
@@ -38,9 +38,7 @@
       display: flex;
       justify-content: space-between;
       gap: 5px;
-      /* Space between the buttons */
       margin-bottom: 10px;
-      /* Space below the buttons */
     }
 
     .sentiment-buttons button {
@@ -93,6 +91,7 @@
     #myPieChart {
       max-width: 200px;
       max-height: 200px;
+      margin-bottom: 5px;
     }
 
     #emptyMessage {
@@ -118,6 +117,25 @@
       justify-content: center;
       align-items: center;
     }
+
+    .footer-text {
+      font-style: italic;
+      color: rgb(96, 96, 96);
+      font-size: 0.7rem;
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+
+    #title {
+      font-weight: bold;
+      text-align: center;
+      margin: 5px;
+    }
+
+    #progressLineContainer {
+      margin-bottom: 0px;
+      padding: 0px;
+    }
   </style>
 </head>
 
@@ -142,13 +160,17 @@
       <button id="highlightSentimentBtn">Färgmarkera</button>
     </div>
     <div id="emptyMessage" style="display: none;">Kunde inte läsa in text</div>
-    <div id="title" style="display:none;"></div>
+    <div id="title" style="display:none;">
+    </div>
     <div id="progressLineContainer"></div>
+    <p class="footer-text">Kronologisk representation av textens sentiment</p>
 
     <canvas id="scatterPlot"></canvas>
+    <p class="footer-text">Baserat på paragraflängd och analyspålitlighet</p>
     <div class="chart-container">
       <canvas id="myPieChart"></canvas>
     </div>
+    <p class="footer-text">Kategoriserar alla analyserade textstycken</p>
   </section>
 
   <script src="chart.js"></script> <!-- Include Chart.js -->

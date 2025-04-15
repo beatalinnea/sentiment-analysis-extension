@@ -39,8 +39,8 @@ export function createPieChart(sentimentData) {
       responsive: true,
       plugins: {
         title: {
-          display: false,
-          text: "Sentiment Fördelning",
+          display: true,
+          text: "Textens sentiment",
         },
         legend: {
           display: false,
@@ -119,6 +119,10 @@ export function createScatterPlot(sentimentData) {
       },
       legend: {
         display: false,
+      },
+      title: {
+        display: true,
+        text: "Sentiment per textstycke",
       },
     },
     onHover: (event, elements) => {
