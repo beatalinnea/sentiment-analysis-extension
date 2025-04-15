@@ -92,7 +92,7 @@ export function createScatterPlot(sentimentData) {
   // Math ceil to closet 10
   const minX = Math.max(0, Math.floor(rawMinX / 10) * 10);
   const rawMaxY = Math.max(...dataPoints.map((point) => point.y));
-  const maxY = Math.max(10, Math.ceil(rawMaxY / 10) * 10);
+  const maxY = (Math.max(10, Math.ceil(rawMaxY / 10) * 10) + 10);
 
   const data = {
     datasets: [
