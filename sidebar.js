@@ -79,6 +79,8 @@ function toggleTextModeOn(boolean) {
   textInputMode = boolean;
   document.getElementById("textInputForm").style.display = boolean ? "block" : "none";
   document.getElementById("highlightSentimentBtn").style.display = boolean || (!boolean && currentSentimentData.length === 0) ? "none" : "block";
+  document.getElementById("scrapeBtn").classList.toggle("active", !boolean);
+  document.getElementById("textInputBtn").classList.toggle("active", boolean);
 }
 
 async function updateSidebarLongform(text) {

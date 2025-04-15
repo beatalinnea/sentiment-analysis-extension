@@ -57,6 +57,11 @@
       color: white;
     }
 
+    .sentiment-buttons button.active {
+      background-color: #54a7ff;
+      color: white;
+    }
+
     #textInputForm {
       display: flex;
       flex-direction: column;
@@ -94,7 +99,8 @@
       margin-bottom: 5px;
     }
 
-    #emptyMessage, #loadingOverlay {
+    #emptyMessage,
+    #loadingOverlay {
       position: absolute;
       top: 0;
       left: 0;
@@ -142,7 +148,7 @@
 <body>
   <h1>sentimentīs</h1>
   <div class="sentiment-buttons">
-    <button id="scrapeBtn">Läs in sida</button>
+    <button id="scrapeBtn">Sidoinläsning</button>
     <button id="textInputBtn">Fritext</button>
   </div>
 
