@@ -147,6 +147,10 @@
     hr {
       margin-top: 20px;
     }
+
+    #instructionsText p, #infoText p {
+      text-align: left;
+    }
   </style>
 </head>
 
@@ -191,14 +195,31 @@
     <button id="infoBtn">Information</button>
   </div>
   <div id="textDisplay" style="display: none;">
-    <p id="instructionsText" style="display: none;">
-      Här är instruktionerna för hur du använder verktyget:
-      1. Välj en sida för att läsa in sentiment.
-      2. Eller skriv in text för att analysera sentiment direkt.
+    <section id="instructionsText" style="display: none;">
+      <p>
+        <strong>Sidoinläsning:</strong> I detta läge läser verktygen in artikeln från den befintliga webbsidan och delar upp texten i sektioner där sentimentet hos varje sektion analyseras separat. De olika textstyckenas resultat representeras i diagrammen.
     </p>
-    <p id="infoText" style="display: none;">
-      Detta verktyg analyserar sentiment i text och visar resultatet på olika sätt, såsom grafer och diagram.
-    </p>
+    <p>
+      <strong>Fritext:</strong> Här kan du välja att analysera en egenvald text, så som utvalda delar av artikeln eller längre stycken. Den valda texten analyseras i sin helhet och resultatet visar textens sammantagna sentiment.
+  </p>
+  </section>
+    <section id="infoText" style="display: none;">
+      <p>
+        <strong>Pålitlighet:</strong> Pålitligheten är en poäng som anger hur säker språkmodellen är på att texten tillhör rätt kategori. Ju högre poäng, desto mer säker är modellen på sin bedömning.
+      </p>
+    
+      <p>
+        <strong>Bar:</strong> Den liggande stapeln visar hur sentimentet förändras genom texten, från början till slut. Bredden på varje segment speglar ordmängden, medan färgens transparens visar pålitligheten - mörkare färg betyder högre pålitlighet. Håll muspekaren över ett segment för att se motsvarande datapunkt i spridningsdiagrammet.
+      </p>
+    
+      <p>
+        <strong>Spridningsdiagram:</strong> Varje datapunkt representerar en rubrik eller paragraf som har analyserats. Positionen i diagrammet baseras på antal ord samt pålitlighet – hur säker modellen är på att rätt etikett har tilldelats texten.
+      </p>
+    
+      <p>
+        <strong>Cirkeldiagram:</strong> Visar fördelningen av textstycken enligt etikett. Pålitligheten beräknas som ett genomsnitt utan att viktas av ordmängden.
+      </p>
+    </section>
   </div>
   <script src="chart.js"></script> <!-- Include Chart.js -->
   <script src="sidebar.js" type="module"></script>
