@@ -205,7 +205,7 @@
   </section>
     <section id="infoText" style="display: none;">
       <p>
-        <strong>Pålitlighet:</strong> Pålitligheten är en poäng som anger hur säker språkmodellen är på att texten tillhör rätt kategori. Ju högre poäng, desto mer säker är modellen på sin bedömning.
+        <strong>Analysmetod:</strong> Resultaten kommer från ett AI-verktyg som analyserar texten baserat på en språkmodell. Språkmodellen är utvecklad av Kungliga Biblioteket med det specifika syftet att undersöka sentiment i svenska texter. Varje analyserat textstycke får en etikett och en pålitlighetspoäng (certainty score) som anger hur säker modellen är att den har satt rätt etikett<sup>1</sup>.
       </p>
     
       <p>
@@ -213,11 +213,15 @@
       </p>
     
       <p>
-        <strong>Spridningsdiagram:</strong> Varje datapunkt representerar en rubrik eller paragraf som har analyserats. Positionen i diagrammet baseras på antal ord samt pålitlighet – hur säker modellen är på att rätt etikett har tilldelats texten.
+        <strong>Spridningsdiagram:</strong> Varje datapunkt representerar en rubrik eller paragraf som har analyserats. Positionen i diagrammet baseras på antal ord samt pålitlighet - hur säker modellen är på att rätt etikett har tilldelats texten.
       </p>
     
       <p>
         <strong>Cirkeldiagram:</strong> Visar fördelningen av textstycken enligt etikett. Pålitligheten beräknas som ett genomsnitt utan att viktas av ordmängden.
+      </p>
+
+      <p id="footnote1"><sup>1</sup>
+        Mer information om språkmodellen kan hittas <a href="https://kb-labb.github.io/posts/2023-06-16-a-robust-multi-label-sentiment-classifier-for-swedish/" target="_blank">här</a>
       </p>
     </section>
   </div>
