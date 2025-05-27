@@ -1,0 +1,53 @@
+Interview - P9
+2025-04-24
+B: Bra. Då kommer jag ställa lite frågor nu. Hade du några generella tankar?
+P9: Nej men jag tänker ju att det är ändå tydligt. När man väl har förstått syftet. Och då tänker jag att man ändå gör om man använder det här verktyget. Men att det kanske är vissa delar om man kanske hade kunnat tydliggöra. 
+B: Ja. För gällande förslag på förbättringar i funktionaliteten och hur det var att använda den Var det några delar som du kände var förvirrande eller som skulle kunna förbättras?
+P9: Ja, men kanske det där med tydligheten kring... vilket stycke man är på det beror ju på, man ser ju när jag håller muspekaren över att det liksom lyser upp lite men man ser ju mest när det lyser upp sen ser man inte så stor skillnad. Och sen också om jag tar någonting här så ser ju inte jag det om texten är där nere. 
+B: Just det, om du håller på någonting som är utanför själva vyn, då syns ju inte det att den är highlightas. 
+P9: Nej, och då är frågan, jag vet inte, jag kan ju inte kodning, men att det är på något sätt att man kommer dit som man pekar på i texten. 
+B: Mm, precis. 
+P9: Det hade ju tydliggjort det för annars måste man ju på något sätt gå tillbaka dit och sen gå tillbaka dit. Ehm. Det var väl det. 
+B: Och sen är det de här två, sidoinläsning och fritext. 
+P9: Mm, precis. Sidoinläsning, nu ska vi se, det var... Vad gör jag? (jag visar)
+B: Så. Nu är den inne på det. 
+P9: Och det är egentligen att man aktiverar själva läsningen? 
+B: Ja, då använder den ju artikeln. 
+P9: Precis. 
+B: Texten därifrån. 
+P9: Är det där den börjar? 
+B: Ja. 
+P9: Ja. Och sen kan man byta till fritext. 
+B: Ja, och du hade lite tankar om den. 
+P9: Ja. Men egentligen så är ju det här kanske något mer övergripande. Men att det jag tänkte kanske är kopplat också till vad jag tänkte att syftet var från början. Men... Jag tänkte väl först att jag inte riktigt förstod att den här fritexten att den kunde vara bortkopplad från artikeln. Men hade jag haft mer koll på verktyget i stort så hade jag kanske fattat det. 
+B: Tror du att hade du då tyckt om att det fanns det alternativet att kunna sätta in en egen vald del av texten? Eller vilken text som helst? 
+P9: Aa, men det är väl också spännande att man inte bara blir låst till något som redan är skrivet utan man kan nästan ställa en fråga själv. 
+B: Mm. 
+P9: Men där kanske jag som användarmässigt hade gjort lite tydligare avgränsning mellan artikeln och de här övergripande delarna. Men det kan nog ha att göra med vad jag tänkte att det var från början också. 
+B: Ja, så att det finns ett värde i den men att det kanske initialt var lite förvirrande? 
+P9: Ja, jag skulle säga så. 
+B: Då till några fler frågor. Hur mycket visste du om sentimentanalys innan idag? 
+P9: Ingenting. 
+B: Nej. Och sen så pratade vi om det och vad det betyder. Och hur mycket brukar du tänka på den känslomässiga tonen i en text när du läser? 
+P9: Men ganska mycket tror jag. Kanske mestadels när det är kommunikation med någon direkt. Men det kan ju också vara ett sätt där man försöker förstå vilket budskap det egentligen är som skribenten vill förmedla. Ibland är det ju någonting annat än bara orden. 
+B: Och du känner ändå att du reflekterar över sådana saker? 
+P9: Ja, det gör jag nog. Ibland kanske jag inte är medveten om att jag gör det men jag anser att det är relevant. 
+B: Och när du då testade verktyget, tyckte du att det påverkade din förståelse för texten? 
+P9: Nu var det mer att jag inte förstod från början över huvud taget. Jag har svårt att svara på den frågan faktiskt. 
+B: Mer generellt, av din själva läsupplevelse - tyckte du att den förändrades när du använde verktyget? 
+P9: Jag hade nog helst... Om jag skulle använda verktyget hade jag nog velat läsa den utan verktyget från början. För att sen undersöka hur det påverkade min... Eller hur jag tolkade texten. Så jag vet inte. Kanske att det kan påverka, det kanske inte nödvändigtvis behöver vara bra. För att man inte gör en egen bedömning. Men jag tror att det är ett verktyg som kan fungera i rätt syfte.
+B: Och hur tyckte du, tyckte du att det var svårt att använda verktyget? Sen när du fick ett grepp om vad det gjorde? 
+P9: Nej. Men jag tror att vissa saker kanske hade kunnat förenklas. Men jag tyckte när man väl fattade det så tyckte jag väl att det var begripligt. Det var ju inte något som var överkomplicerat. 
+B: Och var det några andra saker utöver det som vi har sagt som du tänker skulle kunna förbättras? 
+P9: Hmm… 
+B: Svår fråga?
+P9: Ja, verkligen. Men jag tror inte det. Inget vi har kommit på nu. 
+B: Nej, så... En tydligare distinktion mellan fritextläget kanske. 
+P9: Ja. 
+B: Och tyckte du att diagrammen var hjälpsamma och gick att förstå? 
+P9: Jag tyckte nog den här taben var mer hjälpsam. Sen är ju det här med diagram inte något som jag brukar vilja använda mig av. Men det är ju säkert det för vissa. Men... Ja, jag satte mig inte in i det tillräckligt mycket för att svara på det. Men den här taben och det övergripande cirkeldiagrammet var ju bra. Tydligt. 
+B: Ja, men bra. Tror du att du hade använt det här igen? Utan... Om inte jag satt här? 
+P9: Ja, men det hade jag kanske kunnat göra. Det hade kunnat vara ganska spännande att se. Dels om samstämmigheten med vad man själv upplever. 
+B: Ja. 
+P9: Det hade också kunnat vara kul om liksom, som jag var inne på förut, att det är en annan kontext också - såhär sms och att man kan förfina det på så sätt - vad menar personen egentligen, undertoner och… 
+B: Just det till framtida, till framtida projekt. Ja men toppen, tack så mycket!

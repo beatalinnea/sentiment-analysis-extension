@@ -1,0 +1,44 @@
+Interview - P8
+2025-04-24
+B: Så, då tänkte jag att jag ska ställa lite frågor till dig. Då ska vi se. Hur mycket visste du om sentimentanalys innan idag? 
+P8: Ingenting alls. 
+B: Eh när du, när jag sen berättade vad det var för någonting, hur ofta brukar du tänka på sentimentet hos text? Eller texters känslomässiga ton när du läser? 
+P8: Inte jätteofta. Jag kanske tänker mer på om den är vinklad eller försöker sälja något. Inte om den är arg eller glad eller vad är det för känslor bakom den.. 
+B: Eller positiv, negativ…
+P8: Ja, precis. 
+B: När du nu fick testa vårt verktyg. Tyckte du att det påverkade din förståelse av texten? 
+P8: Nej. 
+B: Och din läsupplevelse generellt? 
+P8: Jag läste inte texten så mycket. 
+B: (Haha) Nej. För att du tänkte på..? 
+P8: Jag testade verktyget. Jag läser inte så mycket. 
+B: Nej, om du skulle läsa, tror du att du hade tyckt att det var intressant att använda verktyget tillsammans med texten du läser? 
+P8: Inte om jag bara skulle läsa för nöjes skull. Om jag hade jobbat med att analysera mycket text kanske jag hade underlättat. Om man blev lite lästrött och men man behöver fortsätta sortera ut sentiment, eller vilka av någon anledning. 
+B: Aa. Du sa att du inte tänkte så mycket på det du läste. Tyckte du att det var distraherande med verktyget på något sätt? 
+P8: Nej, det tyckte jag inte. Men jag vill ju inte läsa artikeln. Jag vill ju bara använda verktyget. 
+B: Hur svårt tyckte du att det var att använda verktyget? 
+P8: Inte alls. 
+B: Var det någonting där du tänkte att det hade kunnat förbättras? 
+P8: Ja, eller det kan också vara väldigt subjektivt. Men jag tyckte väl att... Jag kommer inte ihåg (haha). Men det här diagrammet, punktdiagrammet, förstod jag inte riktigt syftet av varför jag skulle veta om det var långa eller korta stycken. Det tyckte jag förvirrade lite. 
+B: Mm. Vad hade varit ett mer intressant sätt att visa det på? 
+P8: Nej, det hade ju varit om jag hade kunnat trycka på visa mer detaljer eller något. 
+B: Mm, och då få se?
+P8: Ja, det och kanske fler diagram om man skulle vilja gå på djupet. Där gillade jag ju, men där var det bara enkelt att använda för det där generella syftet. Att färgmarkera. Och titta på den här tidslinjefärgerna och se vilken som blev highlightad i artikeln. Det tyckte jag var bra. Man hade velat ha en autoscroll men det ville man ju inte ha. 
+B: Ja, men det hade ändå... Du sökte ändå det? 
+P8: Ja, men jag hade ju absolut inte velat att jag drar musen över den där och det hoppar. 
+B: Nej, men ändå så när man klickar på en viss textdel så vill man veta vilken det är? 
+P8: Jag hade ju kunnat klicka på den här tidslinjen på en färg och sen då scrolla den. Och markera den. 
+B: Just det. Och hur tyckte du att... Själva funktionaliteten på verktyget, fungerade den bra eller hade den några brister? 
+P8: Det tycker jag, nej, inga uppenbara brister tycker jag. Bra informationsknapp där också. Eller knappar, de två där nere, jag kommer inte ihåg hur de stod. 
+B: Tror du att du hade använt det här själv utanför att du och jag sitter här idag? 
+P8: Jag hade nog inte gjort det. För att jag läser ju inte så mycket. Och inte så intresserad av något. Det skulle ju vara ifall jag jobbade med det. Och inte orkade bedöma själv om det var positivt eller negativt sentiment bakom texter. Då hade jag absolut använt det. 
+B: Mm. Jag märkte i början att du hade lite funderingar över färgen, hur stark färgen var. 
+P8: Mm, just det. Jag förstod inte om det... Det borde ju vara väldigt positivt om den är väldigt grön. Men det var pålitlighet och det hänger väl ihop kanske? Nej, det gör ju inte det. 
+B: När du såg att det var pålitlighetspoängen som avgjorde... färgen, reflekterade du då över vad pålitlighet innebar? 
+P8: Ja då fick man ju tänka lite på det och då insåg man ju att kanske det här är behöver nödvändigtvis inte vara en mindre glad text utan det kan ju också vara en mindre träffsäker bara man vet inte vad den är, det kan ju vara vad som helst men färgerna säger ju att den är mindre glad.
+B: Mm Tycker du att det framgick när du läste instruktionerna att det inte handlade om att den var mindre glad utan att det handlade då om träffsäkerheten? Eller var det någonting du förstod själv? 
+P8: Det förstod jag nog innan jag kom till instruktionerna. När jag hovrade över färgen och det stod pålitlighets-blablabla.
+B: Så då tycker du att pålitlighet, det ordet, ändå förklarar..
+P8: Ja, det tycker jag absolut.
+B: Ja men toppen, tack så mycket.
+P8: Varsågod

@@ -1,0 +1,31 @@
+Interview - P11
+2025-04-25
+B: Så, då kommer jag ställa några frågor. Hur mycket visste du om sentimentanalys innan idag? 
+P11: Nästan ingenting. 
+B: Just det. Och när jag sen berättade vad det var för någonting. Hur mycket brukar du tänka på känslomässig ton i text när du läser? 
+P11: Nästan ingenting. 
+B: Nej. 
+P11: Inte när det är nyheter i alla fall. 
+B: Du reflekterar inte om det är negativt, positivt eller neutralt? 
+P11: Inte aktivt. Det sker nog lite mer omedvetet. 
+B: Reflekterade du mer över det när du använde verktyget? 
+P11: Ja, det gjorde jag. 
+B: Och… Tyckte du att det påverkade din förståelse för texten? 
+P11: Hmm… Nja, kanske inte så mycket egentligen.
+B: Nej. Och din läsupplevelse? Blev den annorlunda?
+P11: Den blev nog lite sämre tror jag. Det blev svårare att läsa med flyt. 
+B: Det blev svårare att läsa med flyt - för att det var annat som hade fokus?
+P11: Precis.
+B: Hur svårt tyckte du att det var att använda verktyget? 
+P11: Det var väldigt enkelt.
+B: Var det någonting som du tänkte skulle kunna förbättras? För att göra det ännu enklare? 
+P11: Jag tyckte det var intuitivt - men kanske att man automatiskt färglägger artikeln. Så man slipper klicka på knappen. 
+B: Och själva diagrammen, kändes de intuitiva? 
+P11: Jag tyckte cirkeldiagrammet var mer intuitivt än det andra. 
+B: Ja, än plotten?
+P11: Mm, plotten. Inte så intuitivt för mig. 
+B: Och själva funktionaliteten på verktyget presterade det liksom som man tänkte att det skulle?
+P11: Alltså det var väl kanske lite konstigt att de tyckte att det var positivt att det var barn utan armar och ben i Gaza och att det hade sprängts ambulanser men å andra sidan kanske det var positivt sentiment i texten bara att, fast innehållet var deprimerande.
+B: Ja och det var den artikeln; skjuter sjukvårdare under dina skattepengar, kan hända hos Trump, under Krys vd. Bara så att jag själv kommer ihåg. Toppen, är det något annat som du reflekterade över?
+P11: Nej. 
+B: Då så, tack så mycket.

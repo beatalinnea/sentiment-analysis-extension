@@ -1,0 +1,22 @@
+Interview - P2
+2025-04-22
+B: Hur mycket visste du om sentimentanalys innan idag?
+P2: Exakt noll.
+B: Ja, och nu när du vet vad sentiment ÄR, hur mycket brukar du tänka på sentimentet av en text när du läser till exempel nyhetsartiklar?
+P2: Inget alls.
+B: Och nu när du använde verktyget som utför sentimentanalys, hur tycker du att det påverkade din förståelse av texten?
+P2: Oberörd.
+B: Och hur påverkade det din upplevelse av texten när du använde verktyget?
+P2: Inte mycket.
+B: Din läsupplevelse, förändrades den på något sätt? 
+P2: Nej.
+B: Hur svårt tyckte du att det var att använda verktyget? 
+P2: Det var superenkelt.
+B: Fanns det någonting där du tänkte att det hade kunnat förbättras? 
+P2: Nej. 
+B: Inga brister så som du..?
+P2: Nej, det var enkelt. Tre kulörer. Super enkelt.
+B: Hur upplevde du funktionaliteten på verktyget? Som att hur knappar var placerade och…
+P2: Normalt. Inga svårigheter.
+B: Om du inte hade fått några instruktioner innan, att jag berättade om analysen och om verktyget innan, hur tror du att det hade varit då?
+P2: Jag hade listat ut det. Det är ganska enkelt. Det är tre knappar och tre färger.

@@ -1,0 +1,18 @@
+Interview - P1
+2025-04-21
+B: Då kommer jag nu spela in intervjudelen och då undrar jag först: hur mycket visste du om sentimentanalys innan idag?
+P1: ingenting
+B: Hur mycket brukar du tänka på sentimentet av en text när du läser t.ex nyhetsartiklar?
+P1: jag tänker… ibland så hajar jag till när det känns överdrivet. när någonting är formulerat på ett sätt som känns som att det inte hör dit, som att det är överdrivet negativt eller överdrivet positivt. nu kanske det inte har något med det här att göra, men det känns lite som att det har det. Jag reagerar på hur saker och ting är formulerat
+B: Och när du använde verktyget som utförde sentimentanalysen - hur påverkade det din förståelse för texten?
+P1: inte så mycket
+B: Nä, hur påverkade det din upplevelse av texten?
+P1: Jag blev ännu mer varse om sentimentet och jag läste mer noggrant. Och kanske undermedvetet analyserade jag mera, eftersom jag var varse om sentimentet. Av sentimentanalys vad det är för någonting. 
+B: Hur svårt tyckte du att det var att använda verktyget?
+P1: Jag tyckte inte att det var så svårt.
+B: Nä
+P1: Men jag tyckte att det var lite, lite, förvirrande.
+B: Gällande det då, hur skulle det kunna förbättras?
+P1: Jag tror att man skulle kunna göra, jag… när jag blev varse om fritext - i och med att vi är på en hemsida - så fokuset är att analysera det som är framför mig - det som jag läser - då känns fritext som att det eventuellt har någonting med analysen av nyhetstexten att göra. men det har ju inte det.det som jag tänkte med fritext, det är att man typ söker i nyhetstexten - att dom har någonting med varandra att göra. Det kände jag var lite förvirrande. och det står ingenting heller om det. sen på x-axeln så står det inte heller, det står antal ord på y-axeln - men det står ingenting vad x-axeln är för någonting. det står ingen information så det är svårt att veta vad det är som mäts där. om man inte, om man är ensam - om man inte har någon som berättar för en vad det ska innebära, vad värdena betyder. men annars tycker jag att det funkar bra.
+B: Så då, hur upplevde du funktionaliteten på verktyget?
+P1: Bra

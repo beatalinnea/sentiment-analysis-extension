@@ -1,0 +1,47 @@
+Interview - P12
+2025-04-27
+B: Då ska jag ställa lite frågor till dig. Jag ska bara hitta dem. Hur mycket visste du om sentimentanalys innan idag? 
+P12: Ingenting. 
+B: Och sen när jag förklarade vad det var för någonting och du nu vet hur det är. Skulle du säga att du reflekterar över sentimentet i text när du läser? 
+P12: Alltså... Nu har jag inte läst en text efter jag använder verktyget så det är lite svårt att svara på. 
+B: Men brukar du reflektera över vilken känslomässig ton text har när du läser? Eller inte?
+P12: Jag tror inte det. Jag tror att jag gör det om jag tycker att det sticker ut. Alltså att det inte är det som det borde vara. Men annars inte. 
+B: Och när du fick testa verktyget, hur tyckte du att det påverkade din förståelse för texten om det gjorde det? 
+P12: Det kanske inte gjorde det. 
+B: Mm. Och din läsupplevelse, hur var den annorlunda? 
+P12: Jag vet inte. 
+B: Men tyckte du att, var det någon slags skillnad att använda verktyget och färgmarkeringarna? 
+P12: Det var ju lite skoj sådär. Men jag vet inte om, nu skulle jag testa det, så då tänkte jag ju på det. Men jag vet inte hur det hade varit om jag bara hade använt det utan att aktivt tänka på dem, om du förstår vad jag menar. För nu blev jag ju lite distraherad från texten eftersom jag skulle tänka på verktyget. Men det vet jag inte om det hade varit så om det bara hade funnits. 
+B: Just det. Och när du läser och du ser de här färgerna tycker du att det är givande eller är det mer bara neutralt? 
+P12: Det var lite kul. 
+B: Lite kul, ja. 
+P12: Om man klickade på det där, alltså när man visade dem. 
+B: Ja, färgmarkeringarna. 
+P12: Ja, precis. Så man kunde se vad som var vad. Det var ju skoj. 
+B: Mm. Och tyckte du att det var svårt att använda verktyget? 
+P12: Hmm… Inte, nej. Nej, jag tror inte det. 
+B: Själva funktionaliteten? 
+P12: Mm, nej. Men det hade varit lättare om man kunde klicka på plupparna i diagrammet. Eller vad sa du att det hette? 
+B: Just det, ja. I själva plotten där. 
+P12: Om man kunde klicka på en plupp. 
+B: Mm. 
+P12: För jag fattade inte först att man såg... Vad som var markerat genom att ta musen till pluppen. Eftersom man måste vara på rätt plats i texten för att se det. 
+B: Precis. Så dels det när du håller över att den fick en border runt sig. Det missade du först och sa... 
+P12: Precis, du behövde ju säga att det hände för att jag skulle förstå det. 
+B: Och sen så när du klickar så hade du önskat att du kom dit i texten. 
+P12: Precis. 
+B: Är det något annat som du tänker att det här hade kunnat förbättras? 
+P12: Nej, jag gillar att man kan skriva i en fritext. För att förstå lite mer hur den tänker. 
+B: Ja, tycker du att det bidrar till verktyget som helhet? 
+P12: Mm.
+B: Ja, är det något annat som du vill förmedla? 
+P12: Jo, eller nej. Men om man klickar där på... 
+B: Pie-charten.
+P12: Pie-charten. Då kanske man skulle kunna se vilka ord det är. Fast det kanske inte funkar så. För det kanske är många ord. Analyserar den alla ord eller bara några? 
+B: Den analyserar ju per textstycke. Och de är ju som enheter som du ser i plotten och i baren. Och sen är det ju en sammanställning i pie-charten. Så det kanske var lite, tyckte du att det var tydligt hur diagrammen fungerade.
+P12: Nej.
+B: Inte tydligt?
+P12: Nej. Men nu när jag ser det, hade jag bara kunnat läsa också. Alltså att de längst till höger 100 är mest pålitliga, och att de har olika färg beroende på hur pålitliga de är. Men det fattade jag inte av mig själv. Men sen har jag inte heller använt den så länge. 
+B: Men nu när du tänker på det och tycker att det finns tillräckligt med information? Tillgängligt liksom?
+P12: Kronolog... Alltså ja och nej. Typ kronologisk representation av textens sentiment. Ja. Ja men varför är de inte i... Ja kronolog... Okej. Ja men kanske. Ha ha ha. Så muppig. Jag tror att jag förstår. Jag är lite dålig på att läsa saker. Nu när jag läser förstår jag ju. Ja. 
+B: Ja men bra, toppen. Tack så mycket.

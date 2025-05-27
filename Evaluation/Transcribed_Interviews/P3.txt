@@ -1,0 +1,25 @@
+Interview - P3
+2025-04-22
+Transcription:
+B: Hur mycket visste du om sentimentanalys innan idag? 
+P3: Ingenting alls.
+B: Just det. Och sen när du fick veta vad sentimentanalys är för någonting, hur mycket brukar du tänka på sentimentet av en text när du läser till exempel nyhetsartiklar?
+P3: Ehm. Jag tänker nog ganska mycket på om det är negativt i alla fall. 
+B: Mm. Om textens känslomässiga ton är negativ?
+P3: Ja. Och då tänker jag att det är, att det kan vara styrt också. Och att vi blir utsatta för så mycket negativa texter.
+B: Och när du fick använda verktyget som hjälper till med sentimentanalysen, att visa upp det för användaren, hur tycker du att det påverkade din förståelse av nyhetstexten som du läste?
+P3: Ehm. Ja, det blev en fördjupning i - det påminde mig om att det finns negativ eller positiv eller neutral ton i artiklar.
+B: Och hur påverkade det din upplevelse av texten, eller din läsupplevelse, att använda verktyget?
+P3: Det blev mer som en fördjupning bara. 
+B: Just det. Hur svårt tyckte du att det var att använda verktyget?
+P3: Jag tyckte inte att det var svårt. Jag tyckte att det var ganska lätt.
+B: Var det någonting som du tänkte att det här hade kunnat förbättras?
+P3: Nej, jag tyckte att det var enkelt. 
+B: Och själva funktionaliteten, hur den fungerade?
+P3: Jag tyckte att den fungerade jättebra, var snabb - haha.
+B: Om du inte hade fått några instruktioner innan, att vi hade pratat innan om sentimentanalys eller att jag berättat lite om verktyget - hur hade det varit att använda det då tror du?
+P3: Då hade jag inte klickat på det över huvud taget. För jag hade inte förstått varför jag skulle klicka på det.
+B: Men om jag hade öppnat det åt dig, och du hade testat det men utan några instruktioner?
+P3: Då hade jag nog fattat själv efter ett tag. I alla fall om jag hade klickat på färgmarkeringen, då hade jag nog börjat förstå att “Aha, men vänta - vad gör den här”. 
+B: Tyckte du att verktyget kändes givande, eller vad tyckte du om syftet? 
+P3: Mm, jag förstod inte syftet - när skulle man som privatperson behöva det, det förstod jag inte. Men jag kan förstå att man kanske behöver det om man jobbar med textanalys. 

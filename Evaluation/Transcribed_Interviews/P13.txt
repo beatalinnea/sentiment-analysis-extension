@@ -1,0 +1,41 @@
+Interview - P13
+2025-04-28
+B: Så. Hur mycket visste du om sentimentanalys innan?
+P13: Ehm. Inte jättemycket. 
+B: Och hur mycket brukar du tänka på sentimentet av en text när du läser till exempel nyhetsartiklar? 
+P13: Ja, eftersom jag inte visste exakt vad det betydde så inte så mycket. Men jag brukar ju tänka på kanske hur saker är formulerade. 
+B: Ja. Och liksom tonen i text?
+P13: Ja, men jag visste inte att det var det som var sentiment. 
+B: Just det. Men när vi pratar om vad det var?
+P13: Ja, men då tänker jag mycket på det. 
+B: Ja. Och sen fick du ju testa verktyget. Hur tyckte du, när du använde verktyget, hur tyckte du att det påverkade din förståelse för texten? 
+P13: Jag tror att jag kanske får kolla lite. Ja, men man reagerar väl på vissa saker kanske som man inte... 
+B: Du kan få klicka om du vill också. 
+P13: Jag klickar lite. Det är kul att se vad det är som man själv tänker och det som blir analyserat. B: Ja, blir det att du då tänker en extra gång på det? 
+P13: Mm, det skulle jag säga. 
+B: Och hur påverkar det din läsupplevelse eller din upplevelse av texten? 
+P13: Det är lite roligt att se vad som är positivt och negativt. Och det är kul att det färger. 
+B: Tycker du att det bidrar till läsupplevelsen eller är det neutralt? 
+P13: Ja. Ja, det beror på vad man vill åstadkomma med läsningen. 
+B: Aa. Hur svårt tyckte du att det var att använda verktyget? 
+P13: Inte alls svårt. 
+B: Är det någonting där du tänker att det skulle kunna förbättras? 
+P13: Nej. 
+B: Ingenting? 
+P13: Nej, inte vad jag kan komma på. 
+B: Och vad tycker du - att det liksom funkar som du tänker dig? Tycker du diagrammen är dom, är det lätt att förstå och den gör det du vill att den ska göra? 
+P13: Ja, de är tydliga. 
+B: Och det här fritextläget, vad tycker du om det? 
+P13: Ja, men det... Oj, jag glömde kopiera det här. Det är väl bra om man inte vill se hela texten. Så att säga. 
+B: Hur upplevde du funktionaliteten på verktyget? 
+P13: Jag upplevde den bra. 
+B: Tror du att du hade kunnat tänka dig att använda det privat utanför det här? 
+P13: Ja. Det tror jag. 
+B: I vilken slags situation skulle det vara kul att använda det? 
+P13: Jag tror att jag hade bara satt igång det utan att ha något egentligt syfte med det. Bara för att se vad den tycker. Eller hur det är skrivet. 
+B: Ja, När du ser att någonting är negativt och rött, påverkar det på något sätt din uppfattning om du själv tänkte att det var grönt? Men så ser du att med verktyget så blir det rött. Vad tänker du då? 
+P13: Nej men, sättet som den analyserar på är inte helt samma som jag själv tänker om saker. Men det har ju att göra med metoden och inte verktyget. 
+B: Har du någonting mer som du vill tillägga? 
+P13: Jag tycker att den funkar bra. 
+B: Ja. Kul. Tack så mycket. 
+P13: Tack själv

@@ -1,0 +1,63 @@
+Interview - P14
+2025-05-01 	
+B: Så, då kommer jag ställa lite frågor. Hur mycket visste du om sentimentanalys innan idag? 
+P14: Jag hade ingen aning om vad sentimentanalys var. 
+B: Och sen när vi pratade om vad det är för någonting och gick igenom det, hur mycket brukar du tänka på sentiment av en text när du läser till exempel nyhetsartiklar? 
+P14: Ja. Jag tror att jag reflekterar mest över sentiment på en text när det är någonting som jag inte håller med om sentimentet på. Och att annars reflekterar jag inte över det lika mycket. 
+B: Och sen när du använde verktyget tillsammans med att du läste, hur påverkade det din förståelse för texten? om det gjorde det? 
+P14: Alltså nu läste jag inte texten så mycket mer än att jag höll på med själva verktyget. Vill du ta bort det? 
+B: Nej. Men tyckte du att... 
+P14: Men ställ frågan igen. 
+B: Hur påverkade det din förståelse för texten att läsa tillsammans med verktyget? 
+P14: Alltså jag reflekterade... Jag läste ju mest rubriken då för jag tyckte det var ju den som var mest i artiklarna eh. Den sätter ju sentimentet då för hela artikeln. Och den var ju... Det bekräftade väl sentimentet snarare. 
+B: Och att du fokuserade mindre på läsningen - var det liksom att du tyckte att verktyget På något sätt var distraherande eller störande eller var det för att du var här för att utvärdera verktyget?
+P14: Det var mest för att det var kul att leka med verktyget Och se hur den läste texten Så jag spenderade inte så mycket tid med att läsa texten Men jag spenderade väldigt mycket tid med att leka med verktyget 
+B: Men om du hade läst nyheterna och använt det här verktyget hade det gjort att du hade läst mindre då? 
+P14: Det hade ju möjligtvis kunnat göra det Om jag har en ingång om jag går in i en artikel Med att jag inte håller med om sentimentet I rubriken Så kan jag ju trycka på den här lilla knappen Och så kan jag få det bekräftat Att ja den är negativ mot det jag tycker är positivt. Till exempel. 
+B: Och vad skulle du göra då om det var så?
+P14: Då skulle jag ju få mer vatten på min kvarn. I mina åsikter.
+B: Finns det någon risk med det? Eller någonting bra med det? 
+P14: Det finns väl en risk med att… Fast risk och risk… Alltså det är väl klart att det finns en risk med att man bara blir bekräftad i sina åsikter hela tiden utan att behöva reflektera över vad och varför man tycker någonting. Och sen tänkte jag säga det att medier ska vara oberoende men det är ju inte sant för att alla tidningar är, eller många svenska tidningar är politiskt bundna. Så det är ju inte konstigt att en artikel på en sida skulle kunna, om samma sak, skulle kunna vara negativ och den andra skulle kunna vara positiv. Men det är ju bra på det sättet att om jag läser en text Och är såhär “jag vet inte riktigt vad jag tycker”, då kan det vara spännande att se hur texten i sig, alltså det är ju bra på ett källkritiskt sätt att vara så “vad säger källan om den här saken” - på det sättet så är det väldigt bra - men det beror ju på min ingång som person i artikeln tänker jag.
+B: Mm. Och hur påverkar det din läsupplevelse i helhet? 
+P14: I det här fallet så påverkar det mig genom att jag tyckte det var kul att leka med den. Att jag inte läste artikeln. Men jag kan tänka… vad var frågan igen?
+B: Hur påverkar det din läsupplevelse, eller din upplevelse av texten när du använder verktyget? 
+P14: Och vad svarade jag? 
+B: Du svarade att du fokuserade mer på att... 
+P14: Leka med verktyget ja. Just det, men det var någonting positivt jag tänkte där. Hur det hade kunnat påverka min läsning. Men nu minns jag inte vad det var. 
+B: Mm. Hur svårt tyckte du att det var att använda verktyget? 
+P14: Jag tyckte att det var lite svårt. 
+B: Vad var det som var lite svårt? 
+P14: Jag förstod pajkartan väldigt tydligt. Jag förstod inte grafen. För den var baserad på antal ord. Och hur säkert den kunde ta... Hur säker den kunde säga att det var neutralt eller positivt. Men jag tyckte det kändes ointuitivt att ha det så högt. 
+B: Mm. Så högt?
+P14: Att jag förstår varför den är rimlig att ha. Men den gjorde så att jag till en början då, när man öppnade verktyget, i alla fall första gången. Så förstår jag inte vad den gör, vad den säger. Och sen så hovar man över den så tror man, okej, jag tyckte att jag fick handla lite tankekraft för att förstå varför någonting hamnade någonstans på grafen. Att snarare hade jag tänkt så, okej, så det är ju att den är såhär pass neutral. Eller det är ju att den är såhär pass negativ eller så här pass positiv. Men det var ju inte därför det låg, det var ju antal ord. Det var det jag tänkte på. Säg frågan igen. 
+B: Nej men du har... 
+P14: Ja men säg frågan igen. 
+B: Hur svårt tyckte du att det var att använda verktyget? 
+P14: Har du fler frågor angående verktyget?
+B: Hur skulle verktyget kunna förbättras? 
+P14: Ja men okej Hur skulle verktyget kunna förbättras? Ja det är alltså… Någonting som hände mig nu då när jag prövade den fet var att man hade den här lilla stapeln eller vad man ska säga, längden, där man hade positiv, negativ och sen så hade jag en del neutrala där.
+B: Just det, baren.
+P14: Precis och det är ju jätterimligt - alltså den var jätterimlig och ja, man fattar den till slut. Men det jag önskade, när jag tryckte eller när jag hovrade över såhär okej det här var positivt, då hade jag velat kunna trycka på den knappen. Och så hade jag velat kunna komma till var på sidan som det här är positivt. Och gärna att den hade varit grönmarkerad. Sen fanns ju den funktionen också. Men då måste jag trycka på en annan knapp. Och den är ju inte, den är ju inte, alltså färgmarkera-knappen var ju inte någonting jag inte förstod. Men intuitivt så ville jag bara trycka på den gröna stapeln och se vart det var positivt. 
+B: Mm. Precis, och att du ska kunna se vilken textdel den handlar om oavsett om du är där i vyn eller inte. 
+P14: Mm. Sen tyckte jag att den fritextgrejen där man fick skriva in själv var faktiskt väldigt bra för att den ger förståelse för hur verktyget fungerar. Och man kan pröva olika meningar och se vad räknas som positivt och vad räknas som negativt.
+B: Just det. Och du testade ju den både med att bara skriva in annan text. Men sen såg jag också att du använde den genom att ta textdelar från artikeln. 
+P14: Ja, jag försökte ta... Jag hamnade på en artikel som jag inte tyckte hade särskilt neutralt sentiment. Och försökte se vad i... Och så tog jag en mening som jag tyckte hade negativt sentiment. Lade in den i fritexten och försökte se vad jag måste ändra för att sentimentet ska bli negativt. Och... Det gör ju också att jag förstår varför den tyckte att den var neutral, men jag tycker ändå det är konsti… Eller det blir, jag tror att det också blir en fråga om liksom vars sentiment - vad sentiment är. Att det blir lite så Okej en positiv ton, en negativ ton och en neutral ton Det finns ju negativa konnotationer Och positiva konnotationer. Den säger ju inte liksom så här: I den här meningen beskrivs hemska saker. Även om det liksom, man kan lägga fram den meningen På ett positivt och negativt sätt. Så… också den, fast där tyckte jag också var roligt - den rubriken i den artikeln, den hade ju negativ sentiment. Eller är det neutralt? Jag förstår ju hur den är neutral, men sentimentet i den är ju negativt.
+B: Vi är bäst i Norden på penningtvätt?
+P14: Nej. Det är ju också väldigt roligt, det vill jag verkligen se vad den säger om. Men det var här: Skjuter sjukvårdare - sjunger Eurovision. Alltså sentimentet är ju negativt. Det är ju inte ett neutralt sentiment att säga att någon som skjuter sjukvårdare får sjunga Eurovision. Sentimentet där är ju negativt. 
+B: Det är ju någonting som sker bara. Alltså den påstår ju bara... 
+P14: Ja, skjuter sjukvårdare, sjunger Eurovision. Men det är ju liksom underförstått. Det är ju så en rubrik är skriven. Man skriver ju inte ut så här, hon skjuter sjukvårdare men får sjunga Eurovision. Det är ju som om man hade skrivit det i talspråk. Eller om jag hade skrivit det. Men nu är det här liksom en rubrik. 
+B: Många rubriker är ju negativa dock. 
+P14: Absolut. 
+B: Påverkar, skulle du säga, ser du någon situation där du skulle tycka om att använda det här verktyget? Eller inte?
+P14: För en sån här sak så tyckte jag det var väldigt roligt att använda verktyget. 
+B: För en sån här sak, vad menar du då?
+P14: För att läsa den här artikeln som jag tyckte hade väldigt negativt. Den hade väl inte negativt sentiment. Men det här är ju en fråga om vad är negativt sentiment? För att det är så att “dina pengar kan hamna hos Trump igen” det är ju också neutralt på samma sätt som skjuter sjukvårdare och får sjunga Eurovision är neutralt att det är liksom ren fakta på det sättet så är det ju neutralt båda två så då är vad gör den ena positiv och den ena negativ.
+B: Upplever du att det här verktyget kräver bakgrundsförståelse för att använda? 
+P14: Jag hade nog gärna sett att den själv också förklarar vilka ord är negativa och varför.
+B: Mm. Det är ju inte... Det är ju hela meningarna som analyseras. 
+P14: Men den väljer ju också vissa enstaka ord. Det märkte jag när jag provade skriva... Hej, baby. Hej, älskling. Hej, bitch. Då var ju en... Det var ju absolut en mening, men då är det ju ett ord den reagerar på som negativt. Det är ju orden den reagerar på. Som negativa. Så jag antar att det är hur många negativa ord. Jag antar att den kan läsa i kontext också. För det gjorde den ju med “Dina pengar kan hamna hos Trump igen”. Antingen så förstår den det i kontext. Eller så tycker den att Trump är ett negativt ord. Jag hade gärna fått en... Om jag markerar den. Så kan jag fråga varför har den här dåligt ord. Jag tror också att det hade varit bra... i en sån aspekt där jag får vatten på min kvarn. Att få veta varför är det här negativt sentiment? Eller varför är det här positivt sentiment? För att vissa saker kan ju tolkas neutrala, vissa är negativa. Jag tyckte en neutral sak då var positiv. Men jag menar på att den andra kan vara neutral fast den är negativ. enligt då verktyget. Det hade varit kul att se varför den tycker att någonting är positivt eller negativt. 
+B: Hade det bidragit till... att du hade kanske velat använda eller litat mer på verktyget - om det framgick tydligare vad den tar sina beslut utifrån?
+P14: Det skulle absolut göra att jag litar mer på verktyget. För det är ju det jag kände när jag kanske använde det på en artikel- så förstår jag att det här är en negativt sentiment. Jag köper det. Och på en ganska neutral artikel där en grej var positiv och en negativ - jag förstår det. Men när jag läser en artikel som jag tycker har negativ sentiment då, då vill jag gärna veta varför den inte tycker att den har det utan att den istället har neutralt.
+B: Mm. Jättebra, har du något mer som du vill tillägga? Annars var vi klara.
+P14: Jag tycker verktyget var jätteroligt, jag tycker det var bra men det var små grejer som jag reagerade på.
+B: Ja men jättebra. Toppen, tack så mycket.

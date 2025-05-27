@@ -1,0 +1,32 @@
+Interview - P4
+2025-04-23
+T: Så där borde det fungera. Eh toppen tack för det så vi börjar på en gång, hur mycket visste du om sentimentanalys innan idag. 
+P4: Mm, praktiskt taget inget. 
+T: Ehm, om du har inte tänkt på det som ett koncept i sig, men hur mycket brukar du reflektera över texter, speciellt nyhetsartiklar när du läser dem? 
+P4: Om, ehm. Asså, jo, men det, men det är väl det som grejen. Ja, jag skulle säga att jag har inte tänkt på liksom uttrycket sentimentanalys sånt har känt till det egentligen, däremot så som du säger nu så att vi klarar just nyhetsartiklar den väldigt ofta funderat på, ja men liksom så här, men mer egentligen hur de är vinklade kanske än egentligen. 
+P4: Och sen ibland även vilka ord de använder för och vinkla åt olika håll. 
+T: Eh hur skulle du säga att det här verktyget påverkade din förståelse för texten. 
+P4: Ehm, jag vet inte faktiskt. Ehm, alltså. Det känns att den påverka min förståelse av texterna. 
+P4: Alltså egentligen inte jättemycket utan nu blev det ju nästan mer att vara fokuserad på att förstå liksom hur ai n hade arbetat och hur ain hade tänkt det var mer att jag försökte så här okej, men. Ja, att jag försökt att jag försöker fatta det en. Än själva texten. 
+P4: Och det är väl kanske någonting som så här när man använder verktyg och tycker första gången så kanske blir mer så, men när man använder fler gånger så blir det nog. Ja. 
+T: Så lite skillnad. Hur tycker du att det påverkar din upplevelse av att läsa texten. 
+P4: Ehm. Det påverkar min upplevelse på det sättet att det kändes som att det känns som att det går om man lär sig att lita på verktyget så tror jag att det inte gör att man kan läsa nyheterna mer effektivt så att man kan välja ut mer effektiv vad som, än vad som är vad som känns relevant och vad som inte känns som att. 
+T: Eh hur svårt tyckte det var att använda verktyget. 
+P4: Inte speciellt svårt, egentligen, när jag väl ja, men när jag väl hade liksom kollat igenom allting för det blir lite det, det tar ju. Jag tror att i början för de flesta tar det någon minut va. Bara liksom komma komma till fund hur man ska använda det, men när man sen har det på platsen tyckte inte det så jättesvårt nej kan jag inte säga. 
+T: Ja, eh hur tycker du att det skulle kunna förbättras. 
+P4: Hmm ehm. Ja men jag tror typ en, det som det som hoppade upp för mig främst har väl att jag typ kände att väldigt svårt att fatta exakt. Ja, men för du säger att det ska vara liksom sentimentanalys, det handlar om liksom, ja, men då i det här sammanhanget så är det typ alltså orden specifik om de är laddade positivt eller negativt eh och hur a i upplever det ehm, men hur kopplar det ihop med hur artiklar är vad ska man säga hur artiklarna är laddade? 
+P4: Ni förstår vad jag menar, absolut. Det var där det var där jag kände att det var lite svårt att fatta den kopplingen fullt ut, ja. 
+T: Eh, hur tyckte du att själva funktionaliteten bara det praktiska av verktyget fungerade. 
+P4: Det tycker jag gör det väldigt bra. Ja, absolut. 
+T: Toppen om vi tänker på till exempel den andra artikeln så du kan ta upp den där om du vill se den igen och om du tänker på hur det är den analyserades och resultaten som kom upp. Är det någonting du märker eller någonting som får dig att fundera lite extra. 
+P4: Nej men alltså så här det första jag reagerade på, det var ju ja men först den den första jun är det enda som står i rött Sveriges skadas när idrotten blir en klassfråga, den förstår jag, men den är jag absolut vad ska man säga liksom som som tidningsrubriker ofta är till för att chockera, men sen så började jag titta på vilka det var som var positiva då. Då kollar jag på typ den första här i hyllan, men den tyckte jag var ganska lätt den var rätt svår men det var en. Men jag kände att det var flera. 
+P4: Typ den här till exempel. Oavsett vilken idrott vi pratar om så är utvecklingen skadlig. Tittar jag bara på det. Då tycker jag att det är negativt laddat. Men kollar man sen vidare så tidigare har barn och unga från olika bakgrunder mött sin träningar seriespela lägre kuper. Det har byggt sociala kopplingar till lite människor emellan. 
+P4: När jag tittar på den då känner jag att det fokusera mer på att saker och ting var positiva tydligare. Medan när man pratar nutid så är den negativt landa och därför. Därför tyckte jag den och det var det var lite svårt för det var flera sådana där det var att det typ började med att kritisera samhället och sen så pratar de varför idrotten är bra. 
+P4: Nu kanske jag förklarar det för mig själv varför då är det positivt eftersom att fokus är ju idrotten, så kanske det den kopplar till, eller om den är alltså så här om orden är positivt laddade utifrån vad artikeln handlar om, är det det? 
+T: Eh, så ja, nej, det är den modellen som använder här, det är en så kallad bidirectional encoder vilket betyder att den kollar både på det som är framför men även det som är efter så den kollar inte enbart på ordnivå utan den kollar på hela så till exempel om vi, vi skulle kunna lägga in hela artikeln som är en lång och så ska vi få övergripande, men den tittar på hela alltihopa. Så om det är en del som är negativ och resten är positivt om den anser att huvudfokuset är det som mens är positiva så blir den delen på. 
+P4: Okej, jag förstår. Så den den den den tar liksom stycke för stycke uppenbarligen. 
+T: Så yes. 
+P4: Okej, ja, men då då då då, ja, då börjar jag med på det. Absolut, men om vi då säger att den skulle ha gått mening för mening hade då troligtvis den första meningen i det här sammanhanget varit negativ. 
+T: Med största sannolikhet. 
+P4: Absolut typ. Ja men vad bra, men då då då då fattar jag allt som. 
+T: Toppen, tusen tack.

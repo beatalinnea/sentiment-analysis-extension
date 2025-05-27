@@ -1,0 +1,24 @@
+Interview - P15
+2025-05-03 	
+B: Så, hur mycket visste du om sentimentanalys innan idag? 
+P15: Ingenting. 
+B: Och sen när vi gick igenom vad det var för någonting, hur mycket brukar du tänka på sentiment av en text när du läser till exempel nyhetsartiklar? 
+P15: Inte superofta, utan det kan vara att man tänker typ hur den som har skrivit valt att rikta det, åt vilket håll, om det är liksom... Någonting bra eller någonting som är mindre bra. Men inte så mycket i liksom... Alltså, inte mer än så. 
+B: Mm. Och sen när du fick använda verktyget då, hur påverkade det din förståelse för texten?
+P15: Det gav ju... Det var ju tydligt att se vad som var positivt, neutralt och negativt. Vilket också, tycker jag, stämde överens med det... Som jag läste då också. Så det blev väl mer av en tydlighet. Och får det lite inramat och sorterat kanske. 
+B: Hur påverkade det din läsupplevelse i sin helhet? När du använde verktyget tillsammans med att läsa artikeln. Blev läsupplevelsen annorlunda då? 
+P15: Man fick lite extra hjälp kanske. I hur texten var utformad. Som ett verktyg då, utöver att analysera det själv som jag kanske gör. 
+B: Hur svårt tyckte du att det var att använda verktyget? 
+P15: Det var ganska enkelt. Det var ju tydligt att det bara var liksom två, tre alternativ som man kunde välja mellan. Och det tyckte jag var skönt. Och att den inte tog så mycket plats heller utan den störde liksom inte. 
+B: Att den var på sidan?
+P15: Den var på sidan och det var skönt. Den var som en liten... Alltså den störde inte alls. Det är som om det skulle dyka upp en pop-up-annons i hörnet. Det påverkar inte läsningen.
+B: Så det var ganska seamless?
+P15: Ja. 
+B: Hur skulle verktyget kunna förbättras? Var det någonting du önskade? 
+P15: När man ser vilka delar... Alltså när det blir uppradat som på en tidslinje i det här lilla fältet. 
+B: Baren. 
+P15: Baren, exakt. Där skulle man, eller jag kände att jag ville klicka på de olika delarna för att sen direkt komma till den specifika texten. Så om det var ett specifikt stycke som var negativt så hade jag velat klicka på färgen uppe i baren för att direkt komma till det stycket. 
+B: Mm. Och hur upplevde du funktionaliteten på verktyget? 
+P15: Att den funkade? Ja, det tycker jag. Absolut. Jag tyckte den var snabb på att läsa in den nya texten. Det var ändå tre olika artiklar. Och kände att den var rätt snabb på att kicka igång med en ny analys. I vad som var positivt, neutralt och negativt. 
+B: Ja, men toppen. Tack så mycket. 
+P15: Tack.

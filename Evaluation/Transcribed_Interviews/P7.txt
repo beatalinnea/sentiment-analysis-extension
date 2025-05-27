@@ -1,0 +1,31 @@
+Interview - P7
+2025-04-25
+T: Så eh så hur mycket visste du om sentimentanalys innan idag. 
+P7: Ingenting. 
+T: Ja, och nu när vi har pratat lite om det, hur mycket skulle du säga att du brukar tänka på sentimentanalys när du läser texter?
+P7: Ja alltså det är ju mer. Eh man blir mer medveten om det. 
+T: Mmm. Eh hur tycker du att verktyget påverkade din förståelse för texten. 
+P7: Om man blir mer, man, man blir mer analyserad. Man får lite, man blir lite mer kanske, det blir mer objektivt. 
+T: Eh och hur tyckte du att använda påverka din upplevelse av att läsa texten. 
+P7: Nu var jag, ja, jag var mycket inne i själva, alltså jag lät applikationen göra sitt så jag var inte så jätteinne i själva texten. Jag jag tänkte mer på den här sentiment det gör det liksom. 
+T: Eh tyckte du det var störande att ha den på sidan där eller färger att det kom färg och så.
+P7: Ah, det var okej. Men det var alltså det var ju, det var inte rörigt mot. 
+T: Mhm. Eh hur tycker du att verktyg skulle kunna förbättras? 
+P7: Kanske nån förklaringar, ibland hur det är alltså förklaringar. Bakom varför den har gjort sina val. 
+T: Eh och hur skulle du vilja få det upptagen för det är ju ganska, ja, man kan göra olika nivåer av avancerat så hur skulle vilja få en förklaring för det? 
+P7: Bara för att man kan bara klicka på någon liten infosida nu. 
+T: Mhm. Hur tycker du att funktionalitet fungerade? 
+P7: Det var enkelt. Jag tänker inte om, liksom. 
+T: Ja, och om vi tänker då på till exempel den andra artikeln som vi läste med om idrotten där när du såg färgmarkeringarna där var det något du reflekterade över som du kanske inte hade reflekterat över annars. 
+P7: Alltså det var ju bara. När när det blir röd markering så tyckte man att det var ännu mer negativt än vad det är? 
+T: Ja, mm. 
+P7: Vi ska vara färdig och sen när man ser det andra blåa då blir det liksom. Motsatsen och då kändes det verkligen som en stor skillnad. Och alltså titeln. Det blev värre, det blev ännu större än vad man kanske annars hade tänkt, även om det ändå var ju jävligt tydligt. Sista, såhär är det tydligt hur olika innehållet var från rubriken. 
+T: Mhm. 
+P7: Men färgen gjorde det mer liksom.
+T: Ja, eh och hur tror du att det här skulle kunna användas av andra. Vad tror att det skulle kunna ha för nytta till exempel? 
+P7: Nej, det kanske är några slags analyserande del. Det är ett bra hjälpverktyg. 
+T: Tror du att många som läser nyheterna funderar över sentimentanalys eller tror du att det här är någonting som de inte skulle ha något nytta av? 
+P7: Jag tror det alltså ja, jag brukar höra ofta. Det här med hur de överdriven med. Ibland så att rubriken inte stämmer något själva innehållet. Alltså, men jag har allt för att få dit för att få bort folks eh uppmärksamhet. Den är sådant han överdriver. 
+T: Ja. 
+P7: Är det rakt så här, extra verktyg liksom. 
+T: Toppen.

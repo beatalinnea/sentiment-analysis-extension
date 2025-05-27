@@ -1,0 +1,37 @@
+Interview - P10
+2025-04-25
+B: Så då kommer jag ställa några frågor nu efter att du har testat verktyget. Hur mycket visste du om sentimentanalys innan idag? 
+P10: Väldigt lite. 
+B: Väldigt lite. Och hur mycket, sen när vi pratade om vad det är för någonting, hur mycket brukar du tänka på sentimentet eller känslomässigt ton i text när du läser? 
+P10: Kanske mindre än jag borde. Det känns som ett bra verktyg för att förstå vad avsändaren vill med texten. 
+B: Så du kände att när du läste med verktyget så tänkte du mer på sentimentet i texten? 
+P10: Ja verkligen, tonen.
+B: Eh. Och hur tyckte du att det påverkade din förståelse för texten? 
+P10: Jo men bra på ett översiktligt plan, verkligen. 
+B: Och din läsupplevelse generellt. 
+P10: Ja den blev kanske lite mer... Man fokuserar inte lika mycket på textens innehåll. Utan man får en sån översiktlig bild. Och sen kan man... En risk är väl kanske att man sorterar bort texten. Om den inte känns tillräckligt pålitlig. Utifrån verktygets analys. Men jag tycker den bidrog till upplevelsen att läsa texten. 
+B: Tyckte du att det var svårt att använda verktyget? 
+P10: Nej, det var väldigt användarvänligt. 
+B: Ja. Var det några uppenbara svåra förbättrings... där du såg förbättringspotential? 
+P10: Ja, jag tänkte på att jag tyckte att det var lättare att läsa av cirkeldiagrammet än plotterdiagrammet. Det var liksom lättare att se och förstå. Sen så gillade jag också när texten... färgades i sina färger på själva hemsidan. Det var väldigt lätt att se då. 
+B: Just det, när man färgmarkerade. 
+P10: Exakt. 
+B: Vad var det som var lite förvirrande då med den här plotten? 
+P10: Det var bara lite svårt att se kanske relevansen i antal ord. 
+B: Ja. 
+P10: För mig som läsare. För den axeln tyckte jag liksom inte riktigt sa mig något. Den sa inte så mycket för mig. 
+B: Mm. Har du någon tanke på vad man skulle kunna ha istället? 
+P10: Nej, alltså det är väl därför jag tycker att det var bättre med den här helhetsanalysen i cirkeldiagrammet. Att det var liksom så här stor del av texten. Medan när det var antal ord på varje, när varje del delades in och så var det antal ord på dem också. Då blev det lite rörigt kanske. Svårare att få en översikt på hur pålitlig texten över huvud taget. 
+B: Mm. Och den plotten samverkade ju med den här baren. 
+P10: Ja. 
+B: Vad tyckte du om den? 
+P10: Baren? Alltså pålitlighet? 
+B: Ja. Den som var... Den man höll över så här. 
+P10: Ja men den tyckte jag ändå var... Den var användbar. För den känns också att den gick med texten. Så man kunde liksom... Om man inte ville färga hela texten så kunde man ju bara snabbt gå till den delen av texten som kändes negativ eller positiv. Och se vad det var. Det tyckte jag var bra. 
+B: Och generellt, hur upplevde du funktionaliteten på verktyget? 
+P10: Jo, jag tror att den har en bra funktion. Jag tycker att den är bra när man vill vara lite källkritisk. Och man vill förstå... tonen snabbt på ett översiktligt plan. Sen så tyckte jag väl att verktyget kanske hade lite svårt att förstå ironiska delar, typ en av rubrikerna känns ganska ironisk och den tolkade den som positiv. Men jag skulle kanske säga att den var ganska negativ egentligen. 
+B: Den om kry. 
+P10: Ja. 
+B: Just det. Ser du något tillfälle där du själv skulle vilja använda verktyget? 
+P10: Ja, men absolut. När jag ska välja ut kanske artiklar, om jag ska använda det till någon vetenskaplig text och jag vill ha underlag, då kanske det är skönt att ha ett sånt här verktyg som strävar efter att hitta neutrala källor. 
+B: Ja, men bra. Tack så mycket!
